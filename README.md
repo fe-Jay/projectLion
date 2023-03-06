@@ -1,5 +1,4 @@
-<h1>🦁 project Lion</h1>
+# 🦁 project Lion
 
-<article>
-  <a href="/card/">CSS mission :: CARD<a>
-</article>
+
+1. [CSS CARD](https://jaycode-git.github.io/projectLion/card/)
