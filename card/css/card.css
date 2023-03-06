@@ -24,6 +24,22 @@
         object-fit: cover;
       }
 
+      /* 텍스트 말 줄임표 */
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .ellipsis2 {
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
       /* card ui */
       .cardItem {
         width: 288px;
@@ -125,19 +141,4 @@
 
       .cardItem .footer .btns button:nth-child(3) {
         background-image: url('../img/icon-more.png');
-      }
-
-      .cß .ellipsis {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .ellipsis2 {
-        margin: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
       }
