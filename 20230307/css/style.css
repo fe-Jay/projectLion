@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+
+body {
+  background-color: aliceblue;
+}
+
+/* 로그인 레이아웃 */
+.login {
+  width: 350px;
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  padding: 19px 16px;
+  margin: 40px auto;
+  font-size: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.login p {
+  font-style: normal;
+  font-weight: 400;
+  padding: 0 0 8px;
+}
+
+.login a.btn {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  text-decoration: none;
+  background: #711BFF;
+  border-radius: 4px;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.login .btn img {
+  width: 64px;
+}
+
+.login .desc {
+  padding: 16px 0;
+}
+
+.login .desc a {
+  vertical-align: top;
+  height: 16px;
+  line-height: 16px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #767676;
+}
+
+
+.login .desc a:nth-child(1),
+.login .desc a:nth-child(3) {
+  position: relative;
+}
+
+.login .desc a:nth-child(1)::before {
+  background-image: url('../img/icon-lock.png');
+}
+
+.login .desc a:nth-child(1)::after {
+  content: "|";
+  padding: 0 4px;
+}
+
+.login .desc a:nth-child(3) {
+  float: right;
+}
+
+.login .desc a:nth-child(3)::before {
+  background-image: url('../img/icon-user.png');
+}
+
+.login a:nth-child(1)::before,
+.login a:nth-child(3)::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-size: cover;
+}
+
+/* 컨텐츠 숨김처리 */
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+
+      /* Float Layout */
+      body {
+        width: 100%;
+        background-color: #eaeaea;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+        margin: 0;
+        padding: 40px;
+      }
+
+      body>* {
+        padding: 40px;
+        margin: 20px 0;
+      }
+
+      header {
+        background-color: cornflowerblue;
+      }
+
+      section {
+        display: inline-block;
+        width: calc(100% - 360px);
+        margin-right: 40px;
+        background-color: mediumaquamarine;
+      }
+
+      aside {
+        width: 320px;
+        margin-left: 0px;
+        float: right;
+        background-color: MediumSlateBlue;
+      }
+
+      footer {
+        background-color: lightsteelblue;
+        clear: both;
+      }
+
+      /* Box + p 예제 */
+      article {
+        background-color: white;
+        clear: both;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      article p {
+        font-size: 1rem;
+        color: #000;
+        text-align-last: left;
+      }
+
+      [class^="box"] {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        background-color: mediumturquoise;
+        color: #fff;
+        margin-right: 20px;
+        text-align: center;
+      }
+
+      .box-left {
+        float: left;
+      }
+
+      .box-right {
+        float: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      HEADER
+    </header>
+    <section>
+      SECTION > ARTICLE
+      <article>
+        <div class="box-left">Article</div>
+        <p>행복스럽고 기관과 사는가 교향악이다. 보이는 기관과 그들은 피는 주는 봄바람이다. 가는 위하여서 설레는 작고 것은 것이다. 부패를 용기가 가지에 소담스러운 피고 구하지 소리다.이것은 그들에게
+          듣는다.
+          청춘
+          얼마나 심장은 인간에 들어 속에서 뜨거운지라, 이상은 끓는 것이다. 그들에게 끝에 청춘의 그러므로 지혜는 이것이야말로 피부가 꽃 눈이 피다. 같지 불러 불어 것이다. 이상의 물방아 구하지 인간의
+          무엇을 방황하여도
+        <p>
+      </article>
+      <article>
+        <div class="box-left">Article</div>
+        <p>행복스럽고 기관과 사는가 교향악이다. 보이는 기관과 그들은 피는 주는 봄바람이다. 가는 위하여서 설레는 작고 것은 것이다. 부패를 용기가 가지에 소담스러운 피고 구하지 소리다.이것은 그들에게
+          듣는다.
+          청춘
+          얼마나 심장은 인간에 들어 속에서 뜨거운지라, 이상은 끓는 것이다. 그들에게 끝에 청춘의 그러므로 지혜는 이것이야말로 피부가 꽃 눈이 피다. 같지 불러 불어 것이다. 이상의 물방아 구하지 인간의
+          무엇을 방황하여도
+        <p>
+      </article>
+    </section>
+    <aside>
+      ASIDE
+    </aside>
+    <footer>
+      FOOTER
+    </footer>
+
+  </body>
+
+</html>
