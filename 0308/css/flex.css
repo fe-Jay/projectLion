@@ -1,0 +1,155 @@
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #eee;
+        padding: 40px;
+      }
+
+      article {
+        width: 100%;
+        margin: 24px 0;
+        background-color: #fff;
+        border-radius: 24px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+
+
+      .flex-container-row {
+        flex-direction: row;
+      }
+
+      .flex-container-column {
+        flex-direction: column;
+      }
+
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+
+      /* flex container */
+      [class^=flex-container] {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+      }
+
+      .flex-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: cornflowerblue;
+        padding: 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+      }
+
+      .flex-item span {
+        font-size: 0.8em;
+        font-weight: normal;
+      }
+
+      .flex-container:nth-child(odd) .flex-item {
+        background-color: SkyBlue;
+      }
+
+      /* 박스 레이아웃 만들기 실습 */
+      .flex-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .box:nth-child(2) {
+        justify-content: space-between;
+      }
+
+      .box:nth-child(3) {
+        flex-direction: column-reverse;
+      }
+
+      .box .flex-item:first-child {
+        background-color: #242F9B;
+      }
+
+      .box .flex-item:nth-child(2) {
+        background-color: #646FD4;
+      }
+
+      .box .flex-item:last-child {
+        background-color: #DBDFFD;
+      }
+
+      /* justify 실습 */
+      .jsutify h3 {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        color: #777;
+        font-size: 1em;
+      }
+
+      .jsutify .flex-container {
+        position: relative;
+        padding: 20px 0 20px 200px;
+        border-bottom: 1px dotted #ddd;
+      }
+
+      .jsutify .flex-container .flex-item {
+        width: 100px;
+      }
+
+
+      .center {
+        justify-content: center;
+      }
+
+      .flex-end {
+        justify-content: flex-end;
+      }
+
+      .space-between {
+        justify-content: space-between;
+      }
+
+      .space-around {
+        justify-content: space-around;
+      }
+
+      .space-evenly {
+        justify-content: space-evenly;
+      }
+
+      /* flex 비율 실습 */
+      .item1 .flex-item {
+        background-color: LightGreen;
+        flex-grow: 1;
+        height: 200px;
+      }
+
+      .item1 .flex-item:nth-child(1) {
+        flex-shrink: 0;
+        flex-basis: 300px;
+        background-color: MediumAquaMarine;
+      }
+
+      .item2 .flex-item {
+        flex-grow: 0;
+      }
+
+      .item2 .flex-item:last-child {
+        background-color: cadetblue;
+        flex-grow: 1;
+      }
