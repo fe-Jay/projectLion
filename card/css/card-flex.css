@@ -1,0 +1,65 @@
+      body {
+        background-color: #EDF1D6;
+      }
+
+      /* card ui */
+      .cardFlex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap2x);
+      }
+
+      .cardItem {
+        width: calc((100% - (var(--gap2x) * 2)) / 3);
+      }
+
+      .cardItem .header {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        gap: var(--gap1x);
+      }
+
+      .cardItem .footer {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap2x);
+        padding: 16px 16px;
+      }
+
+
+      .cardItem .footer .action {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .cardItem .footer .action p {
+        flex-grow: 1;
+      }
+
+      .cardItem .footer .action button {
+        flex-grow: 0;
+        width: 32px;
+        height: 32px;
+        border: none;
+        text-indent: -99999rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: transparent;
+      }
+
+
+      /* 반응형 추가 */
+      @media (1024px > width > 768px) {
+        .cardItem {
+          width: calc((100% - var(--gap2x)) / 2);
+        }
+      }
+
+      @media (768px > width) {
+        .cardItem {
+          width: 100%;
+        }
+      }

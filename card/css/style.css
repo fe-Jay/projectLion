@@ -1,0 +1,171 @@
+      body {
+        padding: 40px;
+      }
+
+      /* 네비게이션 */
+      header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: var(--gap2x) 0;
+        gap: var(--gap1x);
+      }
+
+      header a {
+        color: #000;
+        text-decoration: none;
+        font-size: clamp(1.2rem, 2vw, 1.5rem);
+        padding: 10px;
+        opacity: 0.5;
+        text-align: center;
+        display: inline-block;
+      }
+
+      header a:nth-child(1):after,
+      header a:nth-child(2):after {
+        content: "|";
+        opacity: 0.3;
+        padding: 0 0 0 20px;
+      }
+
+      /* aspect-ratio를 통한 이미지 비율 조정 */
+      .ratio {
+        display: block;
+        width: 100%;
+        aspect-ratio: 288/196;
+        object-fit: cover;
+      }
+
+      /* padding을 통한 이미지 비율 조정 */
+      .paddingRatio {
+        width: 100%;
+        height: 0;
+        padding-bottom: 68%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .paddingRatio img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* 텍스트 말 줄임표 */
+      .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .ellipsis2 {
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+
+      /* 카드 공통 레이아웃 */
+      .cardItem>a {
+        display: block;
+        text-decoration: none;
+        color: #5A6A72;
+        overflow: hidden;
+        font-size: 0.8rem;
+        overflow: hidden;
+        background: #FFFFFF;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+      }
+
+      .cardItem h3 {
+        color: #000;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+      }
+
+
+      .cardItem .header img {
+        display: inine-block;
+        width: 40px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 100%;
+        float: left;
+      }
+
+      .cardItem .header span {
+        font-size: 0.8rem;
+        color: #5A6A72;
+      }
+
+      .cardItem .footer .read {
+        color: #29363D;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+
+      .cardItem .footer .action {
+        width: 100%;
+      }
+
+      .cardItem .footer .action p {
+        flex-grow: 1;
+      }
+
+      .cardItem .footer .action button {
+        flex-grow: 0;
+        width: 32px;
+        height: 32px;
+        border: none;
+        text-indent: -99999rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: transparent;
+      }
+
+      .cardItem .footer button:nth-of-type(1) {
+        background-image: url('../img/icon-heart.png');
+      }
+
+      .cardItem .footer button:nth-of-type(2) {
+        background-image: url('../img/icon-share.png');
+      }
+
+      .cardItem .footer button:nth-of-type(3) {
+        background-image: url('../img/icon-more.png');
+      }
+
+      /* 텍스트 숨김 처리 */
+      .a11y-hidden {
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+      }
+
+
+      /* 반응형 구현 */
+      @media (768px > width) {
+        header {
+          flex-wrap: wrap;
+        }
+      }

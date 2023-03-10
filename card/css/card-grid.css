@@ -1,0 +1,49 @@
+body {
+  background: #F5EAEA;
+}
+
+/* card ui */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap2x);
+}
+
+.cardItem .header {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+
+.cardItem .footer {
+  display: grid;
+  gap: var(--gap2x);
+  padding: 16px 16px;
+}
+
+.cardItem .footer .action {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+}
+
+.cardItem .footer .action button {
+  width: 100%;
+  height: 100%;
+  background-size: 32px 32px;
+  background-position: center center;
+}
+
+/* 반응형 추가 */
+@media (1024px > width > 768px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (768px > width) {
+  .cardGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
