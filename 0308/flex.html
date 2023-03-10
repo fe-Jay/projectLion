@@ -14,61 +14,89 @@
     <header>
       <h1>Flex</h1>
     </header>
-    <section>
+    <section class="Box">
       <article class="flex-box">
-        <h2>Flex Row Box Layout</h2>
+        <h2>Flex Box Layout</h2>
+        <h3>column-reverse 사용으로 박스 레이아웃 만들기</h3>
         <div class="flex-container">
           <div class="flex-container-column box">
-            <div class="flex-item"> A</div>
-            <div class="flex-item"> B</div>
-            <div class="flex-item"> C</div>
+            <div class="flex-item">
+              A
+              <span>flex-direction: column;</span>
+
+            </div>
+            <div class="flex-item">
+              B
+              <span>flex-direction: column;</span>
+
+            </div>
+            <div class="flex-item">
+              C
+              <span>flex-direction: column;</span>
+
+            </div>
           </div>
           <div class="flex-container-column box">
-            <div class="flex-item"> D</div>
-            <div class="flex-item"> E</div>
+            <div class="flex-item">
+              D
+              <span>flex-direction: column;</span>
+            </div>
+            <div class="flex-item">
+              E
+              <span>flex-direction: column;</span>
+            </div>
           </div>
           <div class="flex-container-column box">
-            <div class="flex-item"> F</div>
-            <div class="flex-item"> G</div>
-            <div class="flex-item"> H</div>
+            <div class="flex-item">
+              F
+              <span>flex-direction: column-reverse;</span>
+            </div>
+            <div class="flex-item">
+              G
+              <span>flex-direction: column-reverse;</span>
+            </div>
+            <div class="flex-item">
+              H
+              <span>flex-direction: column-reverse;</span>
+            </div>
           </div>
         </div>
       </article>
 
       <article class="flex-container-column jsutify">
         <h2>justify-content</h2>
+        <h3>flex-start</h3>
         <div class="flex-container">
-          <h3>flex-start</h3>
           <div class="flex-item"> A</div>
           <div class="flex-item"> B</div>
           <div class="flex-item"> C</div>
         </div>
+        <h3>center</h3>
         <div class="flex-container center">
-          <h3>center</h3>
           <div class="flex-item"> A</div>
           <div class="flex-item"> B</div>
           <div class="flex-item"> C</div>
         </div>
+        <h3>flex-end</h3>
         <div class="flex-container flex-end">
-          <h3>flex-end</h3>
           <div class="flex-item"> A</div>
           <div class="flex-item"> B</div>
           <div class="flex-item"> C</div>
         </div>
+        <h3>space-between</h3>
         <div class="flex-container space-between">
-          <h3>space-between</h3>
           <div class="flex-item"> A</div>
           <div class="flex-item"> B</div>
           <div class="flex-item"> C</div>
         </div>
+        <h3>space-around</h3>
         <div class="flex-container space-around">
-          <h3>space-around</h3>
           <div class="flex-item"> A</div>
           <div class="flex-item"> B</div>
           <div class="flex-item"> C</div>
         </div>
+        <h3>space-evenly</h3>
         <div class="flex-container space-evenly">
-          <h3>space-evenly</h3>
           <div class="flex-item"> A</div>
           <div class="flex-item"> B</div>
           <div class="flex-item"> C</div>
@@ -82,7 +110,7 @@
         <div class="flex-container item1">
           <div class="flex-item">
             A
-            <span>flex-basis:240px;</span>
+            <span>flex-basis:20vw;</span>
             <span>flex-shrink:0;</span>
           </div>
           <div class="flex-item">
@@ -91,10 +119,6 @@
           </div>
           <div class="flex-item">
             C
-            <span>flex-grow:1;</span>
-          </div>
-          <div class="flex-item">
-            D
             <span>flex-grow:1;</span>
           </div>
         </div>
@@ -114,14 +138,14 @@
           </div>
           <div class="flex-item">
             D
-            <span>flex-grow:0</span>
+            <span>flex-grow:1</span>
           </div>
         </div>
         <h3>flex-basis <span>+</span> flex-shrink</h3>
         <div class="flex-container item3">
           <div class="flex-item">
             A
-            <span>flex-basis:150px</span>
+            <span>flex-basis:30vw</span>
             <span>flex-shrink:0</span>
           </div>
           <div class="flex-item">
@@ -130,10 +154,6 @@
           </div>
           <div class="flex-item">
             C
-            <span>flex-shrink:1</span>
-          </div>
-          <div class="flex-item">
-            D
             <span>flex-shrink:1</span>
           </div>
         </div>

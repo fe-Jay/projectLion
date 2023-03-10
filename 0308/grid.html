@@ -15,81 +15,155 @@
     <header>
       <h1>Grid</h1>
     </header>
-    <section>
+    <section class="Box">
       <article class="atc1">
         <h2>1. Grid Layout</h2>
-        <div class="grid">
-          <div class="g-item">
+        <h3>그리드 레이아웃 샘플</h3>
+        <div class="grid boxItems">
+          <div>
             A
-            <p>
+            <span>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque pariatur quis consequatur earum,
               repellendus
-            </p>
+            </span>
           </div>
-          <div class="g-item">B</div>
-          <div class="g-item">C</div>
-          <div class="g-item">D</div>
-          <div class="g-item">E</div>
-          <div class="g-item">F</div>
-          <div class="g-item">G</div>
-          <div class="g-item">H</div>
-          <div class="g-item">I</div>
+          <div>B</div>
+          <div>C</div>
+          <div>D</div>
+          <div>E</div>
+          <div>F</div>
+          <div>G</div>
+          <div>H</div>
+          <div>I</div>
         </div>
       </article>
 
       <article class="atc2">
         <h2>2-1. auto-fill</h2>
-        <div class="grid autofill">
-          <div class="g-item">fill</div>
-          <div class="g-item">fill</div>
-          <div class="g-item">fill</div>
-          <div class="g-item">fill</div>
-          <div class="g-item">fill</div>
-          <div class="g-item">fill</div>
+        <h3>셀의 크기를 늘리지 않는 것 처럼 보이지만 크기에 많는 셀을 자동 생성</h3>
+        <div class="grid boxItems autofill">
+          <div>
+            fill
+            <span>repeat(auto-fill, minmax(80px, auto));</span>
+          </div>
+          <div>
+            fill
+            <span>repeat(auto-fill, minmax(80px, auto));</span>
+          </div>
+          <div>
+            fill
+            <span>repeat(auto-fill, minmax(80px, auto));</span>
+          </div>
+          <div>
+            fill
+            <span>repeat(auto-fill, minmax(80px, auto));</span>
+          </div>
         </div>
 
         <h2>2-2. auto-fit</h2>
-        <div class="grid autofit">
-          <div class="g-item">fit</div>
-          <div class="g-item">fit</div>
-          <div class="g-item">fit</div>
-          <div class="g-item">fit</div>
-          <div class="g-item">fit</div>
-          <div class="g-item">fit</div>
+        <h3>빈 공간을 셀들이 나누어 가져서 딱 맞게 길이를 설정</h3>
+        <div class="grid boxItems autofit">
+          <div>
+            fit
+            <span>repeat(auto-fit, minmax(0px, auto))</span>
+          </div>
+          <div>
+            fit
+            <span>repeat(auto-fit, minmax(0px, auto))</span>
+          </div>
+          <div>
+            fit
+            <span>repeat(auto-fit, minmax(0px, auto))</span>
+          </div>
+          <div>
+            fit
+            <span>repeat(auto-fit, minmax(0px, auto))</span>
+          </div>
         </div>
       </article>
 
       <article class="atc3">
         <h2>3. Grid Item</h2>
-        <div class="grid">
-          <div class="g-item">A</div>
-          <div class="g-item">B</div>
-          <div class="g-item">C</div>
-          <div class="g-item">D</div>
-          <div class="g-item">E</div>
-          <div class="g-item">F</div>
+        <h3>span</h3>
+        <div class="grid boxItems">
+          <div>
+            A
+            <span>grid-area: 1/1/2/ span 2;</span>
+          </div>
+          <div>
+            B
+            <span>grid-area: 2 / 2 / span 3 / 4;</span>
+          </div>
+          <div>C
+            <span>1fr</span>
+          </div>
+          <div>D
+            <span>1fr</span>
+          </div>
+          <div>E
+            <span>1fr</span>
+          </div>
+          <div>F
+            <span>1fr</span>
+          </div>
         </div>
       </article>
 
       <article class="atc4">
-        <h2>4. Grid Template areas</h2>
-        <div class="grid">
-          <header class="g-item">header</header>
-          <section class="g-item">section</section>
-          <aside class="g-item">aside</aside>
-          <footer class="g-item">footer</footer>
+        <h2>4. Template areas</h2>
+        <h3>grid-template-areas 활용한 레이아웃 제작</h3>
+        <div class="grid boxItems">
+          <header>
+            header
+            <span>grid-area: header;</span>
+          </header>
+          <section>
+            section
+            <span>grid-area: section;</span>
+          </section>
+          <aside>
+            aside
+            <span>grid-area: aside;</span>
+          </aside>
+          <footer>
+            footer
+            <span>grid-area: footer;</span>
+          </footer>
         </div>
       </article>
 
       <article class="atc5">
         <h2>🔥 Grid Mission!</h2>
-        <div class="grid">
-          <div class="g-item">A</div>
-          <div class="g-item">B</div>
-          <div class="g-item">C</div>
-          <div class="g-item">D</div>
-          <div class="g-item">E</div>
-          <div class="g-item">F</div>
+        <h3>grid-column, grid-row를 이용해서 좌표를 이용한 레이아웃 제작</h3>
+        <div class="grid boxItems">
+          <div>
+            A
+            <span>grid-column: 1/4;</span>
+            <span>grid-row: 1/3;</span>
+          </div>
+          <div>
+            B
+            <span>grid-column: 4/6;</span>
+            <span>grid-row: 1/4;</span>
+          </div>
+          <div>
+            C
+            <span>grid-column: 1/3;</span>
+            <span>grid-row: 3/4;</span>
+          </div>
+          <div>
+            D
+          </div>
+          <div>
+            E
+            <span>grid-column: 1/3;</span>
+            <span>grid-row: 4/6;</span>
+          </div>
+          <div>
+            F
+            <span>grid-column: 3/6;</span>
+            <span>grid-row: 4/6;</span>
+          </div>
         </div>
       </article>
     </section>
