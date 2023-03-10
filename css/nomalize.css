@@ -1,7 +1,32 @@
+@font-face {
+  font-family: 'LINESeedKR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Th.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LINESeedKR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LINESeedKR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+}
 
 /**
  * 1. Correct the line height in all browsers.
@@ -13,6 +38,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  background-color: #eee;
 }
 
 /* Sections
@@ -22,8 +48,20 @@ html {
  * Remove the margin in all browsers.
  */
 
+
+html,
 body {
+  width: 100%;
   margin: 0;
+  padding: 0;
+  font-family: 'LINESeedKR', 'Tossface', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  padding: 20px;
+  width: clamp(var(--minW), 100%, var(--maxW));
+  margin: 0 auto;
 }
 
 /**
@@ -371,7 +409,14 @@ template {
 }
 
 /**
- * Add the correct display in IE 10.
+ * Add the correct di* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  padding: 40px;
+}splay in IE 10.
  */
 
 [hidden] {
@@ -384,12 +429,19 @@ template {
   --gap2x: 20px;
   --gap2x: 40px;
   --gap3x: 60px;
+  --minW: 320px;
+  --maxW: 1280px;
 }
 
-* {
-  box-sizing: border-box;
+h1 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
 }
 
+h2 {
+  font-size: clamp(1.5rem, 1.6vw, 2rem);
+  padding: 0;
+  margin: var(--gap1x) 0 0;
+}
 
 ul {
   list-style: none;
@@ -397,9 +449,74 @@ ul {
   padding: 0;
 }
 
-header,
-section,
-.wrap {
-  width: min(1400px, 100%);
-  margin: 0 auto;
+.Box article {
+  width: 100%;
+  margin: var(--gap2x) 0;
+  background-color: #fff;
+  border-radius: 24px;
+  padding: var(--gap2x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap1x);
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+
+.Box h3 {
+  font-weight: 400;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  line-height: 1.5;
+  opacity: 0.6;
+  margin: var(--gap1x) 0;
+  padding: 0 var(--gap1x);
+  position: relative;
+}
+
+.Box h3::before {
+  content: "";
+  width: 4px;
+  height: clamp(20px, 2vw, 28px);
+  background-color: #ddd;
+  position: absolute;
+  left: 0;
+  top: clamp(2px, 0.2vw, 8px);
+}
+
+.Box h3 span {
+  opacity: 0.3;
+  padding: 0 5px;
+}
+
+.Box p {
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+}
+
+
+
+.boxItems>*,
+.boxItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  padding: var(--gap2x) var(--gap1x);
+  color: #fff;
+  font-weight: bold;
+  border-radius: var(--gap1x);
+  -webkit-border-radius: var(--gap1x);
+  -moz-border-radius: var(--gap1x);
+  -ms-border-radius: var(--gap1x);
+  -o-border-radius: var(--gap1x);
+}
+
+.boxItems>*>span,
+.boxItem>span {
+  text-align: center;
+  font-weight: 400;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  opacity: 0.7;
 }
