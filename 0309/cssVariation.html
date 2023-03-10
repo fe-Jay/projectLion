@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nomalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>calc 함수</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS 변수 사용</h1>
+    </header>
+
+    <section class="Box">
+      <article class="atc1">
+        <h2>Calc()</h2>
+        <h3>100%에서 좌우 여백을 제거하고 4로 나눠라</h3>
+        <div class="boxItem">
+          Contents
+          <span>width:100%</span>
+        </div>
+        <ul class="boxItems">
+          <li>
+            A
+            <span>width:calc(100% / 4)</span>
+          </li>
+          <li>
+            B
+            <span>width:calc(100% / 4)</span>
+          </li>
+          <li>
+            C
+            <span>width:calc(100% / 4)</span>
+          </li>
+          <li>
+            D
+            <span>width:calc(100% / 4)</span>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="Box">
+      <article class="atc2">
+        <h2>min(), max(), clamp()</h2>
+        <h3>width를 40%로 설정하지만 최대 600px 이하(min)로 제한</h3>
+        <div class="boxItem">
+          min()
+          <span>width: min(40%, 600px)</span>
+        </div>
+        <h3>width를 60%로 설정하지만 최소 200px 이상(max)으로 제한</h3>
+        <div class="boxItem">
+          max()
+          <span>width: max(200px, 50%);</span>
+        </div>
+        <h3>clamp()로 반응형 폰트사이즈 구현</h3>
+        <ul class="boxItems">
+          <li>
+            A
+            <span>
+              font-size: clamp(0.5rem, 2.5vw, 3rem);
+            </span>
+          </li>
+          <li>
+            B
+            <span>
+              font-size: clamp(0.5rem, 2.5vw, 3rem);
+            </span>
+          </li>
+          <li>
+            C
+            <span>
+              font-size: clamp(0.5rem, 2.5vw, 3rem);
+            </span>
+          </li>
+          <li>
+            D
+            <span>
+              font-size: clamp(0.5rem, 2.5vw, 3rem);
+            </span>
+          </li>
+          <li>
+            E
+            <span>
+              font-size: clamp(0.5rem, 2.5vw, 3rem);
+            </span>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </body>
+
+</html>
