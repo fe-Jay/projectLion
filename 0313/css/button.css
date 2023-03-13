@@ -1,0 +1,114 @@
+:root {
+  --bgColor: #2D3848;
+  --bgBlue: #439AFF;
+  --bgRed: #EB5757;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons div:nth-of-type(odd) {
+  background-color: #EEEEEE;
+}
+
+.buttons div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--gap2x);
+  padding: var(--gap2x);
+}
+
+.buttons div h3 {
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 20%;
+}
+
+
+
+/* Defatul Button */
+.buttons button {
+  background: var(--bgColor);
+  padding: 9px 25px;
+  color: #CBD5DF;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: inset 1px 1px #4A5568;
+  border: 1px solid #1A202C;
+  /*버튼Transition*/
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+}
+
+/* disabled를 제외한 버튼 선택 */
+.buttons button:hover:not(.disabled),
+.buttons button[class$=hover],
+.buttons button:active:not(.disabled),
+.buttons button[class$=active] {
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+.buttons .blue {
+  color: var(--bgBlue);
+}
+
+.buttons .blue[class$=hover],
+.buttons .blue:hover,
+.buttons .blue[class$=active],
+.buttons .blue:active {
+  background-color: var(--bgBlue);
+  border: 1px solid #439AFF;
+  color: #fff;
+}
+
+.buttons .blue[class$=hover],
+.buttons .blue:hover {
+  box-shadow: inset 2px 2px #73B4FF;
+}
+
+.buttons .blue[class$=active],
+.buttons .blue:active {
+  box-shadow: inset 2px 2px #3B78BE;
+}
+
+
+.buttons .red {
+  color: var(--bgRed);
+}
+
+.buttons .red[class$=hover],
+.buttons .red:hover,
+.buttons .red[class$=active],
+.buttons .red:active {
+  background-color: var(--bgRed);
+  border: 1px solid #EB5757;
+  color: #fff;
+}
+
+.buttons .red[class$=hover],
+.buttons .red:hover {
+  box-shadow: inset 2px 2px #FD6F6F;
+}
+
+.buttons .red[class$=active],
+.buttons .red:active {
+  box-shadow: inset 2px 2px #D94242;
+}
+
+
+
+/* 반응형 화면 구현 */
+@media(width < 768px) {
+  .buttons div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
