@@ -1,0 +1,17 @@
+.licat {
+  width: 168px;
+  height: 200px;
+  background: url(../img/keyframes-licat.png) no-repeat 0 0 / auto 100%;
+  animation: move-licat 0.8s infinite steps(6);
+  -webkit-animation: move-licat 0.8s infinite steps(6);
+}
+
+@keyframes move-licat {
+  0% {
+    background-color: left 0;
+  }
+
+  100% {
+    background-position: right 0;
+  }
+}
