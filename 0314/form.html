@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/nomalize.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Form</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Form</h1>
+    </header>
+    <section class="Box">
+
+
+      <article>
+        <h2>Form</h2>
+        <h3>Label + Input Form</h3>
+
+        <!-- label을 사용해서 웹접근성 향상 -->
+        <label>
+          ID
+          <input id="user-id" type="text" placeholder="아이디를 입력하세요.">
+        </label>
+
+        <label for="user-ps">
+          Password
+          <input id="user-ps" type="password" placeholder="비밀번호를 입력하세요.">
+        </label>
+
+        <label for="user-tel">
+          Phone Number
+          <input id="user-tel" type="tel" placeholder="연락처를 입력하세요.">
+        </label>
+
+        <h3>Label + Select</h3>
+        <label>
+          🍕 좋아하는 음식을 선택해주세요!
+          <select id="lunch">
+            <optgroup label="분식">
+              <option value="lunch-1" disabled>라면</option>
+              <option value="lunch-1">참치김밥</option>
+              <option value="lunch-2">치즈김밥</option>
+              <option value="lunch-2" selected>비건김밥</option>
+            </optgroup>
+            <optgroup label="커피">
+              <option value="coffee-1">아아</option>
+              <option value="coffee-2">라떼</option>
+              <option value="coffee-2">아바라</option>
+              <option value="coffee-1">아샷추</option>
+            </optgroup>
+          </select>
+        </label>
+
+        <button type="submit">제출</button>
+      </article>
+
+      <article>
+        <h2>fieldset</h2>
+        <h3>제목 + 컨텐츠 그룹핑을 이용할 때 fieldset 이용</h3>
+        <fieldset>
+          <legend>사용 기술</legend>
+          <div>
+            <label for="tech1">
+              <input type="checkbox" id="tech1">
+              HTML
+            </label>
+            <label for="tech2">
+              <input type="checkbox" id="tech2">
+              CSS
+            </label>
+            <label for="tech3">
+              <input type="checkbox" id="tech3">
+              Sass
+            </label>
+            <label for="tech4">
+              <input type="checkbox" id="tech4">
+              JavaScript
+            </label>
+            <label for="tech5">
+              <input type="checkbox" id="tech5" checked>
+              React
+            </label>
+            <label for="tech6">
+              <input type="checkbox" id="tech6">
+              Vue
+            </label>
+            <label for="tech8">
+              <input type="checkbox" id="tech8">
+              TypeScript
+            </label>
+            </di>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>연령</legend>
+          <label for="age1">
+            <input type="radio" name="age" id="age1">
+            10대
+          </label>
+          <label for="age2">
+            <input type="radio" name="age" id="age2">
+            20대
+          </label>
+          <label for="age3">
+            <input type="radio" name="age" id="age3" checked>
+            30대
+          </label>
+          <label for="age4">
+            <input type="radio" name="age" id="age4">
+            40대 이상
+          </label>
+        </fieldset>
+      </article>
+
+    </section>
+  </body>
+
+</html>

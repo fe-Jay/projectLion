@@ -1,0 +1,75 @@
+:root {
+  --Primary: #16FF00;
+}
+
+::selection {
+  background-color: var(--Primary);
+}
+
+input {
+  accent-color: var(--Primary);
+}
+
+.Box article label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  font-weight: 700;
+  padding: 0 0 var(--gap2x);
+}
+
+.Box article input:not(input[type=checkbox], input[type=radio]),
+.Box article select {
+  width: 100%;
+  height: 48px;
+  padding: 0 8px;
+  border: 1.5px solid #000;
+  transition: box-shadow 0.4s ease;
+  -webkit-transition: box-shadow 0.4s ease;
+  -moz-transition: box-shadow 0.4s ease;
+  -ms-transition: box-shadow 0.4s ease;
+  -o-transition: box-shadow 0.4s ease;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Box article fieldset {
+  padding: var(--gap2x) var(--gap1x);
+}
+
+.Box article fieldset label {
+  display: inline-block;
+  padding: var(--gap1x);
+}
+
+button {
+  width: 100%;
+  height: 48px;
+  font-size: clamp(16px, 2vw, 18px);
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  color: #000;
+  background-color: var(--Primary);
+}
+
+@media(width < 425px) {
+  .Box article fieldset label {
+    display: block;
+  }
+}

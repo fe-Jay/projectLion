@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/nomalize.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>Table</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Table</h1>
+    </header>
+    <section class="Box">
+
+      <article>
+        <h2>표(table)</h2>
+        <h3>테이블 구조</h3>
+        <table class="table">
+          <caption>Table caption</caption>
+          <colgroup>
+            <col class="title">
+            <col span="3" class="desc">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">
+                <span>thead</span>
+                th
+              </th>
+              <th scope="col">
+                <span>thead</span>
+                th
+              </th>
+              <th scope="col">
+                <span>thead</span>
+                th
+              </th>
+              <th scope="col">
+                <span>thead</span>
+                th
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <span>tbody</span>
+                td
+              </th>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span>tbody</span>
+                td
+              </th>
+              <td>td</td>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+
+
+
+      <article>
+        <h2>Table 병합</h2>
+        <h3>colspan: 열 병합, rowspan: 행 병합</h3>
+        <table class="table">
+          <caption>colspan, rowspan행렬 병합 예제</caption>
+          <colgroup>
+            <col class="title">
+            <col span="3" class="desc">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">
+                <span>thead</span>
+                th
+              </th>
+              <th scope="col">
+                <span>thead</span>
+                th
+              <th scope="col">
+                <span>thead</span>
+                th
+              </th>
+              <th scope="col" colspan="2">
+                <span>thead</span>
+                th colspan="2"
+              </th>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="2">
+                <span>tbody</span>
+                th rowspan="2"
+              </th>
+              <td>td</td>
+              <td rowspan="2">td rowspan="2"</td>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+            <tr>
+              <td>td</td>
+              <td colspan="2">td colspan="2"</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h2>scope</h2>
+        <h3>th의 scope 값에 'col', 'row'를 입력하면 시각적 어려움을 겪는 사용자의 이해를 도울 수 있다 (+웹 접근성 향상)</h3>
+        <table class="table">
+          <caption>Table scope 입력 예제</caption>
+          <colgroup>
+            <col class="title">
+            <col span="3" class="desc">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">
+                <span>thead</span>
+                th scope ="col"
+              </th>
+              <th scope="col">
+                <span>thead</span>
+                th scope ="col"
+              </th>
+              <th scope="col">
+                <span>thead</span>
+                th scope ="col"
+              </th>
+              <th scope="col">
+                <span>thead</span>
+                th scope ="col"
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <span>tbody</span>
+                scope="row"
+              </th>
+              <td>td</td>
+              <td>td</td>
+              <td rowspan="2">td</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <span>tbody</span>
+                scope="row"
+              </th>
+              <td>td</td>
+              <td>td</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+
+
+      <article>
+        <h2>id - header</h2>
+        <h3>제목 셀이 2줄 이상이 되어 복잡한 경우 id="NAME"을 header="NAME" 동일한 값을 입력해서 연결 (+웹 접근성 향상, 실무에서는 scope를 더 많이 사용.)</h3>
+        <table class="table">
+          <caption>id, header 입력 예제</caption>
+          <colgroup>
+            <col class="title">
+            <col span="3" class="desc">
+          </colgroup>
+          <thead>
+            <tr>
+              <th rowspan="2">
+                <span>thead</span>
+                th
+              </th>
+              <th id="col-1-1">
+                <span>thead</span>
+                th id="col-1-1"
+              </th>
+              <th id="col-1-2" colspan="2">
+                <span>thead</span>
+                th id="col-1-2"
+              </th>
+            <tr>
+              <th id="col-2-1">
+                <span>thead</span>
+                th id="col-2-1"
+              </th>
+              <th id="col-2-2">
+                <span>thead</span>
+                th id="col-2-2"
+              </th>
+              <th id="col-2-3">
+                <span>thead</span>
+                th id="col-2-3"
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th id="col-3">
+                <span>tbody</span>
+                th id="row-1"
+              </th>
+              <td header="col1-1 col1-2 row-1">
+                td
+                <span>header="col1-2 col2-2 row-1</span>
+              </td>
+              <td>
+                td
+                <span>header="col1-1 col1-2 row-1</span>
+              </td>
+              <td>
+                td
+                <span>header="col1-3 col1-3 row-1</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+
+
+      <article>
+        <h2>Table 활용 예제</h2>
+        <table>
+          <caption>2023학년도 대학 수능능력시험 성적통지표</caption>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col" rowspan="2">한국사 영역</th>
+              <th scope="col">국어 영역</th>
+              <th scope="col">수학 영역</th>
+              <th scope="col" rowspan="2">영어 영역</th>
+              <th scope="col" colspan="2">탐구 영역</th>
+              <th scope="col">제2 외국어</th>
+            </tr>
+            <tr>
+              <th>선택과목</th>
+              <th>화법과 작문</th>
+              <th>확률과 통계</th>
+              <th>생활과 윤리</th>
+              <th>지구과학</th>
+              <th>독일어</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">표준점수</th>
+              <td rowspan="2"></td>
+              <td>131</td>
+              <td>137</td>
+              <td rowspan="2"></td>
+              <td>53</td>
+              <td>64</td>
+              <td rowspan="2"></td>
+            </tr>
+            <tr>
+              <th scope="row">백분위</th>
+              <td>131</td>
+              <td>137</td>
+              <td>53</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <th scope="row">등급</th>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+              <td>1</td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </body>
+
+</html>
