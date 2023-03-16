@@ -1,0 +1,14 @@
+/* 회원가입 실습 */
+main {
+  width: min(100%, 400px);
+  margin: 71px auto 52px;
+}
+
+.form-wrap {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap2x);
+  padding: var(--gap2x);
+  margin-bottom: 24px;
+}

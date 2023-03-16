@@ -1,0 +1,136 @@
+.heart {
+  font-size: 1rem;
+  padding: var(--gap1x);
+}
+
+.heart::before {
+  content: '';
+  display: inline-block;
+  background: url('../img/heart.svg')no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-right: 4px;
+  animation: heartBeat ease-in-out 1s infinite alternate;
+  -webkit-animation: heartBeat ease-in-out 1s infinite alternate;
+}
+
+.diary-main textarea {
+  margin: 16px 0;
+}
+
+
+/* article */
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+
+.container {
+  display: flex;
+  width: min(calc(100% - 60px), 1224px);
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.container main {
+  flex-shrink: 0;
+  flex-basis: 456px;
+  border-right: 1px solid #FF4F6E;
+  padding: 56px 40px 0 0;
+  min-height: calc(100vh - var(--gap120));
+  box-sizing: border-box;
+}
+
+.container section {
+  padding: 94px 0 0;
+}
+
+.container section ul li {
+  margin-bottom: 80px;
+}
+
+
+@media(width < 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .container main {
+    border-right: none;
+    padding-right: 0;
+    min-height: auto;
+  }
+}
+
+.diary-article {
+  border-color: var(--grey);
+  border-style: solid;
+  border-width: 4px 1px 1px 1px;
+  padding: 64px 48px;
+  position: relative;
+}
+
+.diary-article::before,
+.diary-article::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 40px;
+  background-color: #FF4F6E;
+}
+
+.diary-article::before {
+  background: #fffaf0 url('../img/quote-start.svg')no-repeat center/contain;
+  left: 30px;
+  top: -20px;
+}
+
+.diary-article::after {
+  background: #fffaf0 url('../img/quote-end.svg')no-repeat center/contain;
+  right: 30px;
+  bottom: -20px;
+}
+
+.diary-header {
+  display: flex;
+  align-items: center;
+  padding: 0 0 var(--gap2x);
+}
+
+.article-title {
+  flex-grow: 1;
+}
+
+.article-title::before {
+  content: "";
+  display: block;
+  border-top: 1px solid var(--grey);
+  position: absolute;
+  width: 100%;
+  top: 4px;
+  left: 0;
+  z-index: -1;
+}
+
+.article-time {
+  color: #677880;
+  font-size: 12px;
+  flex-grow: 0;
+}
+
+.article-content {
+  color: #5a6a72;
+  font-size: 14px;
+  line-height: 1.4;
+}
