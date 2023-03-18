@@ -1,6 +1,5 @@
 :root {
   --skin: #888;
-  --hair: dotted 10px #888;
   --animate: 10s ease-in infinite;
 }
 
@@ -43,7 +42,6 @@ body {
 
 
 
-
 /* 고양이 얼굴 */
 
 .cat .face {
@@ -51,7 +49,6 @@ body {
   position: absolute;
   width: 280px;
   height: 240px;
-  aspect-ratio: 3/2;
   border-radius: 115px;
   -webkit-border-radius: 115px;
   -moz-border-radius: 115px;
@@ -63,58 +60,35 @@ body {
 }
 
 .cat .face [class$=ear] {
-  width: 1rem;
-  height: 5rem;
   background-color: var(--skin);
+  width: 80px;
+  height: 80px;
   position: absolute;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
-
-.cat .face [class$=ear]::after {
-  content: '';
-  top: 0.6rem;
-  left: -1.2rem;
-  width: 3.725rem;
-  height: 3.725rem;
-  background-color: var(--skin);
-  border-radius: 0.6rem;
-  clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
-  position: absolute;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -webkit-border-radius: 0.6rem;
-  -moz-border-radius: 0.6rem;
-  -ms-border-radius: 0.6rem;
-  -o-border-radius: 0.6rem;
+  right: 30px;
+  top: -10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .cat .face .left-ear {
-  top: -0.5rem;
-  left: 3.5rem;
-  transform: rotate(240deg);
-  -webkit-transform: rotate(240deg);
-  -moz-transform: rotate(240deg);
-  -ms-transform: rotate(240deg);
-  -o-transform: rotate(240deg);
+  left: 30px;
+  transform: skew(200deg) rotate(110deg);
+  -webkit-transform: skew(200deg) rotate(110deg);
+  -moz-transform: skew(200deg) rotate(110deg);
+  -ms-transform: skew(200deg) rotate(110deg);
+  -o-transform: skew(200deg) rotate(110deg);
 }
 
 .cat .face .right-ear {
-  top: -0.5rem;
-  right: 3.5rem;
-  transform: rotate(-70deg);
-  -webkit-transform: rotate(-70deg);
-  -moz-transform: rotate(-70deg);
-  -ms-transform: rotate(-70deg);
-  -o-transform: rotate(-70deg);
+  transform: skew(-200deg) rotate(-110deg);
+  -webkit-transform: skew(-200deg) rotate(-110deg);
+  -moz-transform: skew(-200deg) rotate(-110deg);
+  -ms-transform: skew(-200deg) rotate(-110deg);
+  -o-transform: skew(-200deg) rotate(-110deg);
 }
-
 
 .cat .face .eyes {
   width: 100%;
@@ -250,7 +224,7 @@ body {
   height: 48px;
   position: absolute;
   right: -140px;
-  top: 25px;
+  top: 40px;
   border-radius: 120px;
   -webkit-border-radius: 120px;
   -moz-border-radius: 120px;
@@ -269,13 +243,13 @@ body {
 
 @media(width < 768px) {
   body {
-    zoom: 0.6;
+    scale: 0.4;
   }
 }
 
 @media(width < 425px) {
   body {
-    zoom: 0.4;
+    scale: 0.2;
   }
 }
 
@@ -423,7 +397,7 @@ body {
     -o-transform: rotate(-170deg);
   }
 
-  60% {
+  50% {
     transform: rotate(-80deg);
     -webkit-transform: rotate(-80deg);
     -moz-transform: rotate(-80deg);
@@ -449,7 +423,7 @@ body {
     -o-transform: rotate(-170deg);
   }
 
-  60% {
+  50% {
     transform: rotate(-120deg);
     -webkit-transform: rotate(-120deg);
     -moz-transform: rotate(-120deg);
@@ -476,12 +450,12 @@ body {
     -o-transform: rotate(-70deg);
   }
 
-  60% {
-    transform: rotate(-60deg);
-    -webkit-transform: rotate(-60deg);
-    -moz-transform: rotate(-60deg);
-    -ms-transform: rotate(-60deg);
-    -o-transform: rotate(-60deg);
+  55% {
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
   }
 
   50% {
@@ -492,12 +466,12 @@ body {
     -o-transform: rotate(-70deg);
   }
 
-  40% {
-    transform: rotate(-60deg);
-    -webkit-transform: rotate(-60deg);
-    -moz-transform: rotate(-60deg);
-    -ms-transform: rotate(-60deg);
-    -o-transform: rotate(-60deg);
+  45% {
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
   }
 
   100% {
