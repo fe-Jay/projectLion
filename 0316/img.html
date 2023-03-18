@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/nomalize.css">
+    <title>Img</title>
+    <style>
+      .Box article {
+        display: block;
+      }
+
+      .vw-srcset p::after {
+        content: 'width > 1000px';
+      }
+
+      @media(width < 1000px) {
+        .vw-srcset p::after {
+          content: 'width < 1000px';
+        }
+      }
+
+      @media(width <800px) {
+        .vw-srcset p::after {
+          content: 'width < 800px';
+        }
+      }
+
+      @media(width < 600px) {
+        .vw-srcset p::after {
+          content: 'width < 600px';
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Image</h1>
+    </header>
+    <section class="Box">
+      <article>
+        <h2>X 서술자</h2>
+        <h3>화면 해상도(밀도)기준으로 다른 이미지를 로딩</h3>
+        <img srcset="images/rabbit_300.png 2x,
+          images/rabbit_500.png 3x" src="images/rabbit_150.png" alt="귀염뽀짝 흰둥 토끼쓰">
+      </article>
+
+      <article class="vw-srcset">
+        <h2>W 서술자</h2>
+        <h3>화면 너비(뷰포트)기준으로 이미지를 로딩, sizes 속성과 함께 사용!</h3>
+        <img srcset="images/vw-1000.png 1000w,
+                      images/vw-800.png 800w, 
+                      images/vw-600.png 600w" sizes="(min-width:1000px) 800px,
+                  (min-width : 800px) 600px,
+                  300px" src="images/vw-600.png" alt="뷰포트 srcset 활용 예제">
+        <p></p>
+      </article>
+
+
+      <article>
+        <h2>Picture</h2>
+        <h3>다른 이미지 & 다른 포맷 중 하나를 선택할 때 사용.</h3>
+        <picture>
+          <source srcset="images/pic-1000.svg" media="(min-width:1000px)" type="image/webp">
+          <source srcset="images/pic-800.svg" media="(min-width:800px)" type="image/avif">
+          <img src="images/pic-600.svg" alt="귀염뽀짝 흰둥 토끼쓰">
+        </picture>
+      </article>
+    </section>
+
+  </body>
+
+</html>

@@ -1,0 +1,123 @@
+      .container {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin-top: 500px;
+        margin-left: 500px;
+      }
+
+      .y {
+        position: absolute;
+        transform: rotate(270deg);
+        top: -250px;
+        left: -250px;
+        width: 500px;
+      }
+
+      .z {
+        position: absolute;
+        transform: rotate(140deg);
+        top: 128px;
+        left: -352px;
+        width: 400px;
+      }
+
+      .line {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        margin: 50px 0;
+      }
+
+      .line::before {
+        content: ' ';
+        flex-grow: 1;
+        height: 3px;
+        background-color: black;
+      }
+
+      .box-container {
+        /* 주석을 풀어보세요. */
+        /* perspective: 500px; */
+        position: relative;
+        top: -260px;
+        width: 200px;
+        height: 200px;
+        background-color: gold;
+      }
+
+      .box {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 220px;
+        height: 220px;
+        background-color: lightsalmon;
+        opacity: 0.7;
+        transform: translateX(100px) translateY(100px) translateZ(100px);
+        -webkit-transform: translateX(100px) translateY(100px) translateZ(100px);
+        -moz-transform: translateX(100px) translateY(100px) translateZ(100px);
+        -ms-transform: translateX(100px) translateY(100px) translateZ(100px);
+        -o-transform: translateX(100px) translateY(100px) translateZ(100px);
+      }
+
+      .translate3d {
+        display: flex;
+        justify-content: space-between;
+        width: 1000px;
+        height: 200px;
+        margin: 100px auto;
+        perspective: 400px;
+        background-color: #F4EEFF;
+      }
+
+      .panel {
+        width: calc(100% / 5);
+        height: 200px;
+        background: #000;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+        transform: rotateY(95deg);
+        border-radius: 12px;
+      }
+
+
+      .vanishingPoint {
+        perspective-origin: bottom right;
+        display: flex;
+        justify-content: center;
+        gap: 40px 0;
+        width: 1000px;
+        margin: 100px auto;
+        perspective: 800px;
+        background-color: #F4EEFF;
+        flex-wrap: wrap;
+      }
+
+
+      .panel:nth-child(5n + 1) {
+        background: #c;
+      }
+
+      .panel:nth-child(5n +2) {
+        background: #646FD4;
+      }
+
+      .panel:nth-child(5n + 3) {
+        background: #88aaff;
+      }
+
+      .panel:nth-child(5n + 4) {
+        background: #A6B1E1;
+      }
+
+      .panel:nth-child(5n + 5) {
+        background: #424874;
+      }
+
+      .panel:nth-child(n+6):nth-child(-n+10) {
+        opacity: 0.7;
+      }
+
+      .panel:nth-child(n+11) {
+        opacity: 0.3;
+      }
