@@ -9,11 +9,13 @@
   font-family: "SpoqaHanSansNeo-Regular";
 }
 
-body {
-  background-color: aliceblue;
-}
 
 /* 로그인 레이아웃 */
+.Box {
+  width: min(100%, 600px);
+  margin: 0 auto;
+}
+
 .login {
   width: 350px;
   background: #FFFFFF;

@@ -5,65 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/nomalize.css">
+    <link rel="stylesheet" href="../Asset/nomalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
   </head>
 
   <body>
-    <article class="login">
-      <h1 class="a11y-hidden">Login</h1>
-      <p>더 편리해진 위니브에 오신 것을 환영합니다.</p>
-      <a href="" class="btn">
-        <img src="img/weniv-logo.png" alt="">
-        로그인
-      </a>
-      <div class="desc">
-        <a href="">
-          아이디 <span class="a11y-hidden">찾기</span>
+    <header>
+      <h1>Login</h1>
+    </header>
+    <section class="Box">
+      <article class="login">
+        <h1 class="a11y-hidden"></h1>
+        <p>더 편리해진 위니브에 오신 것을 환영합니다.</p>
+        <a href="" class="btn">
+          <img src="img/weniv-logo.png" alt="">
+          로그인
         </a>
-        <a href="">비밀번호 찾기</a>
-        <a href="">
-          회원가입
-        </a>
-      </div>
-    </article>
+        <div class="desc">
+          <a href="">
+            아이디 <span class="a11y-hidden">찾기</span>
+          </a>
+          <a href="">비밀번호 찾기</a>
+          <a href="">
+            회원가입
+          </a>
+        </div>
+      </article>
+    </section>
   </body>
 
-  <script>
-    //조건문 구조
-    if (num > 10) {
-      console.log('🔍 num이 10보다 크다.');
-    } else {
-      console.log('🔍 num이 10과 같거나 작다.');
-    }
-
-
-    const won = 1000;
-    if (won > 800) {
-      console.log('🥖800원에 구매 가능');
-    } else if (won > 400) {
-      console.log('🧀400원에 구매 가능');
-    } else {
-      console.log('돈이 없는 분은 구매할 수 없습니다...');
-    }
-    // = 🥖800원에 구매 가능
-
-
-    //2중 조건문 구조
-    let fst = true;
-    let snd = false;
-
-    if (fst && snd) {
-      console.log('fst 충족')
-      console.log('snd 충족');
-    } else if (fst) {
-      console.log('snd 미충족');
-    } else {
-      console.log('모든 조건 미충족');
-    }
-// = snd 미충족
-
-  </script>
-
-</html>`
+</html>
