@@ -8,7 +8,7 @@
 5. [ CSS ⏐ Transform ](https://jaycode-git.github.io/projectLion/0313/transform.html)
 6. [ CSS ⏐ Table ](https://jaycode-git.github.io/projectLion/0314/table.html)
 7. [ CSS ⏐ Form ](https://jaycode-git.github.io/projectLion/0314/form.html)
-8. [ CSS ⏐ Media Quary ](https://jaycode-git.github.io/projectLion/0315/mediaQuary.html)
+8. [ CSS ⏐ Media Query ](https://jaycode-git.github.io/projectLion/0315/mediaQuary.html)
 9. [ CSS ⏐ Img & Picture ](https://jaycode-git.github.io/projectLion/0316/img.html)
 10. [ CSS ⏐ Perspective ](https://jaycode-git.github.io/projectLion/0316/perspective.html)
 
