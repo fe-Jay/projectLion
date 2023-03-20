@@ -17,3 +17,4 @@
 * [ Mission ⏐ Flex & Grid & Float를 이용한 카드 레이아웃 구현 ](https://jaycode-git.github.io/projectLion/card/card-grid.html)
 * [ Mission ⏐ 캐릭터 창작 미션 ](https://jaycode-git.github.io/projectLion/character/cat.html)
 * [ Mission ⏐ 두근두근 다이어리 반응형 웹 구현 ](https://jaycode-git.github.io/projectLion/diary/)
+* [ Mission ⏐ 벤딩머신 반응형 웹 구현 ](https://jaycode-git.github.io/projectLion/cola)
