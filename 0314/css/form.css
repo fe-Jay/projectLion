@@ -68,7 +68,7 @@ button {
   background-color: var(--Primary);
 }
 
-@media(width < 425px) {
+@media (max-width:425px) {
   .Box article fieldset label {
     display: block;
   }
