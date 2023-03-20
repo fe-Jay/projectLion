@@ -157,14 +157,13 @@ article a::after {
 
 
 /*  ✢ ∙ * ✢ ∙ * ✢ ∙ Media query  ✢ ∙ * ✢ ∙ * ✢ ∙ */
-
-@media(width > 1024px) {
+@media (min-width:1025px) {
   article {
     width: min(100%, 486px);
   }
 }
 
-@media(width < 1024px) {
+@media (max-width:1024px) {
 
   /* flex */
   .flex {
@@ -193,7 +192,7 @@ article a::after {
   }
 }
 
-@media(width < 767px) {
+@media (max-width:768px) {
 
   /* flex */
   .wrap .title h3 {
@@ -219,7 +218,7 @@ article a::after {
 }
 
 
-@media(width < 390px) {
+@media (max-width:375px) {
   .wrap .title p {
     font-size: 17px;
     padding-bottom: 40px;
