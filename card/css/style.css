@@ -164,7 +164,7 @@
 
 
       /* 반응형 구현 */
-      @media (768px > width) {
+      @media (max-width:768px) {
         header {
           flex-wrap: wrap;
         }
