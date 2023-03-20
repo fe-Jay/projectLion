@@ -121,11 +121,11 @@ body {
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-  transform: translatey(-50%);
-  -webkit-transform: translatey(-50%);
-  -moz-transform: translatey(-50%);
-  -ms-transform: translatey(-50%);
-  -o-transform: translatey(-50%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   position: absolute;
   top: 50%;
   animation: cat-eye var(--animate);
@@ -241,15 +241,15 @@ body {
 
 /* 반응형 Scale */
 
-@media(width < 768px) {
+@media (max-width:768px) {
   body {
-    scale: 0.4;
+    scale: 0.6;
   }
 }
 
-@media(width < 425px) {
+@media (max-width:425px) {
   body {
-    scale: 0.2;
+    scale: 0.4;
   }
 }
 
