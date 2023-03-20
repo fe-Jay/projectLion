@@ -16,19 +16,19 @@
         content: 'width > 1000px';
       }
 
-      @media(width < 1000px) {
+      @media (max-width:1000px) {
         .vw-srcset p::after {
           content: 'width < 1000px';
         }
       }
 
-      @media(width <800px) {
+      @media (max-width:800px) {
         .vw-srcset p::after {
           content: 'width < 800px';
         }
       }
 
-      @media(width < 600px) {
+      @media (max-width:600px) {
         .vw-srcset p::after {
           content: 'width < 600px';
         }
