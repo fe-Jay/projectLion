@@ -102,8 +102,7 @@ header nav .btns a:nth-of-type(1)::after {
 }
 
 
-
-@media(width < 425px) {
+@media (max-width:425px) {
   .header-wrap>div {
     /* flex-direction: column; */
   }
