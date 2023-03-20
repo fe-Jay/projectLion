@@ -418,8 +418,8 @@ input::placeholder {
 
 /** Media Query
 ========================================================================== */
+@media (max-width: 768px) {
 
-@media(width < 768px) {
   body {
     background-color: #fff;
   }
