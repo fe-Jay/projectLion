@@ -1,0 +1,133 @@
+html {
+  background: none;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
+
+.board-list {
+  width: min(100%, 728px);
+  margin: 100px auto 0px;
+}
+
+.board-list-tab {
+  display: flex;
+  padding: 22px 0;
+}
+
+.board-list-tab ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.board-list-tab ul li {
+  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.board-list-tab ul li:first-child {
+  padding-right: 28px;
+}
+
+.board-list-tab ul li+li {
+  padding: 0 28px;
+}
+
+.board-list-tab li:not(:last-of-type)::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 8px;
+  background: #ddd;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.board-list-tab a {
+  color: #5A6A72;
+}
+
+.board-list-tab .board-link {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.board-list-tab .board-link::after,
+.board-list-tab .board-link::before {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: calc(50% - 1px);
+  right: 0;
+}
+
+.board-list-tab .board-link::before {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.board-list-tab .active a {
+  color: #29363D;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 20px;
+}
+
+/* board-list-content */
+.board-list-content {
+  border-top: 1px solid #eee;
+}
+
+.board-list-content li {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  gap: 16px;
+  color: #29363D;
+  border-bottom: 1px solid #eee;
+}
+
+.board-list-content .board-label {
+  color: #2E6FF2;
+  flex-basis: 80px;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.board-list-content .board-subject {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding: 16px 0;
+}
+
+.board-list-content .board-date {
+  flex-shrink: 0;
+}
