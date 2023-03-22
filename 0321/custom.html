@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom Form</title>
+    <link rel="stylesheet" href="../Asset/nomalize.css">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+
+  <body>
+    <h1>custom Form</h1>
+    <section class="Box">
+      <article>
+        <h2>Checkbox</h2>
+        <h3>input을 살리고 클릭하는 방법</h3>
+        <div>
+          <input id="chk1" type="checkbox">
+          <label for="chk1">checkbox 1</label>
+        </div>
+        <div>
+          <input id="chk2" type="checkbox" class="custom-input" checked>
+          <label for="chk2">checkbox 2</label>
+        </div>
+
+        <div>
+          <input id="radio1" name="same_radio" type="radio" checked>
+          <label for="radio1">radio 1</label>
+          <input id="radio2" name="same_radio" type="radio">
+          <label for="radio2">radio 2</label>
+        </div>
+
+        <h3>input 자체를 숨기고 label을 커스텀 하는 방법</h3>
+        <div class="label-hold">
+          <input type="checkbox" id="agree" class="txt-hide inp-hold">
+          <label for="agree" class="labl-hold">동의합니다</label>
+        </div>
+      </article>
+
+      <article>
+        <h2>CSS로만 구현하는 Select</h2>
+        <select class="custom-select-css">
+          <option>최애 프로그래밍 언어</option>
+          <option>Python</option>
+          <option>Java</option>
+          <option>JavaScript</option>
+          <option>C#</option>
+          <option>C/C++</option>
+        </select>
+      </article>
+
+      <article>
+        <h2>JavaScript + CSS로 구현하는 Select</h2>
+        <!-- JavaScript .active 로 제어 -->
+        <div class="custom-select-js">
+          <button type="button">최애 프로그래밍 언어</button>
+          <ul>
+            <li><button type="button">최애 프로그래밍 언어</button></li>
+            <li><button type="button">Python</button></li>
+            <li><button type="button">Java</button></li>
+            <li><button type="button">JavaScript</button></li>
+            <li><button type="button">C#</button></li>
+            <li><button type="button">C/C++</button></li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+    <script>
+      const list = document.querySelector('.custom-select-js');
+      list.addEventListener('click', function() {
+        list.classList.toggle('active');
+      });
+    </script>
+  </body>
+
+</html>

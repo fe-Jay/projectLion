@@ -1,0 +1,243 @@
+/** Check + radio
+========================================================================== */
+
+/* input을 살리고 클릭하는 방법 */
+input[type='checkbox'],
+input[type='radio'] {
+  appearance: none;
+  width: 1.7em;
+  height: 1.6em;
+  margin: -3px 3px 0;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% 90%;
+}
+
+input[type='checkbox']+label,
+input[type='radio']+label {
+  cursor: pointer;
+  color: #333;
+}
+
+input[type='checkbox']:checked+label,
+input[type='radio']:checked+label {
+  font-weight: bold;
+  color: #000;
+}
+
+input[type='checkbox'] {
+  background-image: url('../img/check1.svg');
+}
+
+input[type='checkbox']:checked {
+  background-image: url('../img/check1-checked.svg');
+}
+
+
+.custom-input {
+  background-image: url('../img/check2.svg');
+}
+
+.custom-input:checked {
+  background-image: url('../img/check2-checked.svg');
+}
+
+
+input[type='radio'] {
+  background-image: url('../img/radio.svg');
+}
+
+input[type='radio']:checked {
+  background-image: url('../img/radio-checked.svg');
+}
+
+/* input 자체를 숨기고 label을 커스텀 하는 방법 */
+input[type='checkbox'].txt-hide {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.labl-hold {
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.labl-hold::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid black;
+  margin: 0 2px -5px 0;
+}
+
+.inp-hold+.labl-hold::after {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url('../img/checkmark.png') center/cover;
+  position: absolute;
+  left: 0px;
+  bottom: 22px;
+  opacity: 0;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+.inp-hold:checked+.labl-hold::after {
+  bottom: 0px;
+  opacity: 1;
+}
+
+
+.inp-hold:focus-visible+.labl-hold::before {
+  outline: 2px solid #000;
+  outline-offset: 5px;
+}
+
+
+
+
+
+/** select
+========================================================================== */
+
+/* css만 활용한 select */
+.custom-select-css {
+  width: 200px;
+  height: 40px;
+  padding: 0 12px;
+  font-size: 14px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #c4c4c4;
+  appearance: none;
+  background: url('../img/select.svg')no-repeat calc(100% - 15px);
+}
+
+.custom-select-css:focus {
+  outline: none;
+  border-color: #9b51e0;
+  box-shadow: 0 0 0 3px #f8e4ff;
+}
+
+
+/* css + js를 활용한 select */
+button,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.custom-select-js {
+  width: 200px;
+  position: relative;
+  font-size: 14px;
+}
+
+.custom-select-js button {
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+.custom-select-js>button {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #c4c4c4;
+  appearance: none;
+  text-align: left;
+}
+
+.custom-select-js>button::after {
+  content: '';
+  display: inline-block;
+  background: url('../img/select.svg')no-repeat center/cover;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: calc(50%-0.5em);
+  right: 1.2em;
+}
+
+.custom-select-js.active>button::after {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.custom-select-js.active>button,
+.custom-select-js>button:focus {
+  outline: none;
+  border-color: #9b51e0;
+  box-shadow: 0 0 0 3px #f8e4ff;
+}
+
+.custom-select-js ul {
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  padding: 10px 8px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: absolute;
+  top: 50px;
+  background-color: #fff;
+  /* select 닫힌 효과를 위해 숨김처리 */
+  display: none;
+}
+
+.custom-select-js.active ul {
+  /* select 열린 효과를 위해 블록 처리 */
+  display: block;
+  z-index: 1;
+}
+
+.custom-select-js ul li+li {
+  margin-top: 10px
+}
+
+.custom-select-js ul li button {
+  width: 100%;
+  text-align: left;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.custom-select-js ul li.active button,
+.custom-select-js ul li button:hover {
+  background: #f8e4ff;
+}
