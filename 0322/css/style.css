@@ -5,7 +5,6 @@
   --border: solid #c4c4c4;
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -29,6 +28,7 @@ li {
 
 
 /* input */
+/* ✅ input 타입 등 요소에 height 넣지 말고 padding으로 유연하게 구현 */
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -37,13 +37,16 @@ input[type="password"] {
   border: 1px var(--border);
   border-radius: 5px;
   font-size: 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 input::placeholder {
   font: inherit;
   color: #767676;
 }
-
 
 input[type=checkbox] {
   appearance: none;
@@ -62,6 +65,19 @@ input[type=checkbox]+label {
   cursor: pointer;
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset+fieldset {
+  margin-top: 10px;
+}
+
+
+
+
 
 /* button */
 button {
@@ -71,11 +87,12 @@ button {
   border: none;
 }
 
+a[class^="btn-lg-"],
 button[class^="btn-lg-"] {
   width: 100%;
-  height: 50px;
   font-size: 18px;
-  font-weight: bold;
+  padding: 15px;
+  text-align: center;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -83,7 +100,16 @@ button[class^="btn-lg-"] {
   -o-border-radius: 5px;
 }
 
+a[class^="btn-lg-ghost"],
+button[class^="btn-lg-ghost"] {
+  border: 1px solid #767676;
+  font-size: 16px;
+  color: #727272;
+  padding: 15px 48px;
+}
+
 .btn-lg-primary {
+  font-weight: bold;
   background-color: var(--primary);
   color: #fff;
   width: 100%;
@@ -92,7 +118,9 @@ button[class^="btn-lg-"] {
 
 
 
+
 /* Hidden */
+legend,
 .a11y-hidden {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -110,13 +138,18 @@ button[class^="btn-lg-"] {
 ========================================================================== */
 .wrap {
   width: min(100%, 520px);
-  height: fit-content;
   background: #fff;
   position: absolute;
-  inset: 0;
-  margin: auto;
+  top: 50%;
+  left: 50%;
   border: 1px var(--border);
   border-radius: 10px;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 
@@ -125,10 +158,6 @@ button[class^="btn-lg-"] {
 
 /** login-modal
 ========================================================================== */
-
-.login-modal {
-  position: relative;
-}
 
 .login-modal h1 {
   width: 100%;
@@ -172,6 +201,11 @@ button[class^="btn-lg-"] {
   -o-transform: translate(-50%, -50%) rotate(45deg);
 }
 
+
+
+
+
+/* login-form */
 .login-form {
   padding: 24px;
 }
@@ -183,17 +217,134 @@ button[class^="btn-lg-"] {
   margin: 0;
 }
 
-.login-form input:not(:first-child) {
-  margin-top: 10px
-}
-
 .login-form .login-auto {
-  padding: 16px 0;
+  padding: 6px 0 16px;
 }
 
 .login-form .login-btns {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 20px 0 0;
   gap: 12px;
+}
+
+.login-form .login-btns a {
+  font-size: 14px;
+  color: #767676;
+}
+
+.login-form .login-btns a:not(:first-child)::before {
+  content: '|';
+  color: #ddd;
+  padding-right: 12px;
+}
+
+
+
+
+
+/* error message */
+
+.inp-error {
+  display: none;
+  padding: 6px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #F4492E;
+  text-align: left;
+}
+
+.login-form-field.error .inp-error {
+  display: block;
+
+}
+
+
+
+
+
+/* login-sns */
+.login-sns {
+  padding: 0 24px 24px;
+}
+
+.login-sns h2 {
+  margin: 0;
+  padding: 20px 0;
+  position: relative;
+}
+
+.login-sns h2::before,
+.login-sns h2::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  inset: 0;
+  margin: auto;
+}
+
+.login-sns h2::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.login-sns h2::after {
+  content: '또는';
+  font-size: 14px;
+  color: #727272;
+  font-weight: 500;
+  background: #fff;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 10px;
+}
+
+.login-sns-btns li {
+  margin-top: 10px;
+  position: relative;
+}
+
+.login-sns-btns a[class^="btn-lg-ghost"]::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.login-sns-btns .btn-lg-ghost-google::before {
+  background: url('../img/google.svg') no-repeat center left;
+}
+
+.login-sns-btns .btn-lg-ghost-fb {
+  border: 1px solid rgba(45, 156, 219, 1);
+}
+
+.login-sns-btns .btn-lg-ghost-fb::before {
+  background: url('../img/facebook.svg') no-repeat center left;
+}
+
+.login-sns-btns .btn-lg-ghost-naver {
+  border: 1px solid rgba(0, 191, 24, 1);
+}
+
+.login-sns-btns .btn-lg-ghost-naver::before {
+  background: url('../img/naver.svg') no-repeat center left;
+}
+
+.login-sns-btns .btn-lg-ghost-kakao {
+  border: 1px solid rgba(242, 201, 76, 1)
+}
+
+.login-sns-btns .btn-lg-ghost-kakao::before {
+  background: url('../img/kakao.svg') no-repeat center left;
 }

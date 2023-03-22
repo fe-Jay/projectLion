@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<!-- ✅ language 간략하게 표기 -->
+<html lang="ko">
 
   <head>
     <meta charset="UTF-8">
@@ -11,32 +12,48 @@
 
   <body>
     <section class="wrap login-modal">
-      <h1>로그인 또는 회원가입</h1>
-      <button class="modal-close"><span class="a11y-hidden">닫기</span></button>
+      <!-- ✅ header 추가  -->
+      <header>
+        <h1>로그인 또는 회원가입</h1>
+        <!-- ✅ form submit 으로 작동될 우려가 있어서 button type 추가 -->
+        <button type="button" class="modal-close"><span class="a11y-hidden">닫기</span></button>
+      </header>
       <form>
         <article class="login-form">
           <h2>위니브에서 여러분의 궁금증을 해결하세요! :)</h2>
-          <label for="login-id" class="a11y-hidden">아이디</label>
-          <input type="text" id="login-id" placeholder="아이디">
-          <label for="login-ps" class="a11y-hidden">비밀번호</label>
-          <input type="text" id="login-ps" placeholder="비밀번호">
-          <div class="login-auto">
+          <!-- ✅ fieldset 으로 grouping -->
+          <fieldset class="login-form-field">
+            <label for="login-id" class="a11y-hidden">아이디</label>
+            <input type="text" id="login-id" placeholder="아이디">
+            <strong class="inp-error">아이디를 입력해주세요.</strong>
+          </fieldset>
+
+          <fieldset class="login-form-field error">
+            <label for="login-ps" class="a11y-hidden">비밀번호</label>
+            <!-- ✅ input type password로 수정 -->
+            <input type="password" id="login-ps" placeholder="비밀번호">
+            <strong class="inp-error">아이디 혹은 비밀번호와 일치하지 않습니다.</strong>
+          </fieldset>
+
+          <fieldset class="login-auto">
             <input type="checkbox" id="login-auto-chk">
             <label for="login-auto-chk">로그인 상태 유지</label>
-          </div>
+          </fieldset>
           <button type="submit" class="btn-lg-primary">로그인</button>
-          <ul class="login-btns">
-            <li><a href="">회원가입</a></li>
-            <li><a href="">아이디/비밀번호 찾기</a></li>
-          </ul>
+          <div class="login-btns">
+            <!-- ✅ 요소 2개 정도는 ul li로 구성하지 말 것. -->
+            <!-- ✅ 앵커태그에 "javascript:void(0)", "#none" 경로 표기해서 클릭 방지 -->
+            <a href="javascript:void(0)">회원가입</a>
+            <a href="#none">아이디/비밀번호 찾기</a>
+          </div>
         </article>
-        <article class="sns-login">
-          <h2>SNS 간편 로그인</h2>
-          <ul class="sns-login-btns">
-            <li><a href="">구글 계정으로 로그인</a></li>
-            <li><a href="">페이스북 계정으로 로그인</a></li>
-            <li><a href="">네이버 계정으로 로그인</a></li>
-            <li><a href="">카카오톡 계정으로 로그인</a></li>
+        <article class="login-sns">
+          <h2><span class="a11y-hidden">SNS 간편 로그인</span></h2>
+          <ul class="login-sns-btns">
+            <li><a class="btn-lg-ghost-google" href="#none">구글 계정으로 로그인</a></li>
+            <li><a class="btn-lg-ghost-fb" href="#none">페이스북 계정으로 로그인</a></li>
+            <li><a class="btn-lg-ghost-naver" href="#none">네이버 계정으로 로그인</a></li>
+            <li><a class="btn-lg-ghost-kakao" href="#none">카카오톡 계정으로 로그인</a></li>
           </ul>
         </article>
       </form>
