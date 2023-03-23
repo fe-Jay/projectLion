@@ -1,0 +1,36 @@
+<html lang="kos">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>🥪 Toast Editor</title>
+    <link rel="stylesheet" href="../Asset/nomalize.css">
+    <!-- Toast Editor 2.0.0과 의존성 -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+  </head>
+
+  <body>
+    <section class="Box">
+      <h1>🥪 Toast Editor</h1>
+      <article>
+        <h2>토스트 :)</h2>
+        <h3>이 에디터를 활용하게 될 날이 기다려진다 💗</h3>
+        <div id="editor"></div>
+      </article>
+    </section>
+    <script>
+      const Editor = toastui.Editor;
+
+      const editor = new Editor({
+        el: document.querySelector("#editor"),
+        height: "600px",
+        initialEditType: "markdown",
+        previewStyle: "vertical",
+      });
+
+            // editor.getHTML()
+            // editor.getMarkdown()
+    </script>
+  </body>
+
+</html>
