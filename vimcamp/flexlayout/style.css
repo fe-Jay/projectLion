@@ -1,0 +1,268 @@
+/** Reset
+========================================================================== */
+
+:root {
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
+	--left-width: max(26%, 240px);
+	--primary: #673399;
+	--secondary: #bd8fe8;
+}
+
+* {
+	box-sizing: border-box;
+	font-weight: 500;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.a11y-hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+}
+
+
+
+
+
+/** Wrap
+========================================================================== */
+
+.l_wrapper {
+	width: min(100%, 1080px);
+	margin: 0 auto;
+}
+
+@media (max-width:1080px) {
+	.l_wrapper {
+		padding: 0 24px;
+	}
+}
+
+.section {
+	padding: 100px 0;
+}
+
+.section-portfolio {
+	background: var(--primary);
+}
+
+.section-event {
+	background: salmon;
+}
+
+
+
+
+/** portfolio
+========================================================================== */
+
+/* portfolio-header */
+
+.portfolio-header {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 115px;
+	margin: 0 0 100px;
+}
+
+.portfolio-header h1 {
+	flex-basis: var(--left-width);
+	flex-shrink: 0;
+	font-size: clamp(32px, 3.8vw, 40px);
+	font-weight: 500;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.portfolio-header h1::after {
+	content: '';
+	width: 80px;
+	height: 2px;
+	background: var(--secondary);
+	position: absolute;
+	top: 50%;
+	right: -80px;
+}
+
+.portfolio-header h1 span {
+	display: inline-block;
+	position: relative;
+	z-index: 0;
+}
+
+.portfolio-header h1 span::after {
+	content: '';
+	width: 100%;
+	height: clamp(16px, 2vw, 22px);
+	background: orangered;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.portfolio-header p {
+	color: var(--secondary);
+	font-size: 14px;
+	font-weight: 500;
+	width: min(100%, 450px);
+	line-height: 1.5;
+}
+
+@media(width < 768px) {
+	.portfolio-header {
+		flex-direction: column;
+		gap: 0;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.portfolio-header h1::after {
+		width: 0;
+	}
+
+	.portfolio-header h1 span:nth-of-type(1) {
+		display: block;
+	}
+}
+
+
+
+
+/* portfolio-content */
+
+.portfolio-content {
+	width: 100%;
+}
+
+.card-portfolio {
+	background: #fff;
+	display: flex;
+}
+
+.card-portfolio:not(:last-of-type) {
+	margin-bottom: 24px;
+}
+
+.card-portfolio:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
+
+.card-portfolio .card-cover {
+	flex-basis: var(--left-width);
+	flex-shrink: 0;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	min-height: 200px;
+}
+
+.card-portfolio .card-cover::after {
+	content: '';
+	background: var(--primary);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.5;
+}
+
+.card-portfolio .card-cover img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+.card-portfolio .card-cover h2 {
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	color: #fff;
+	padding: 0;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	word-break: break-word;
+	z-index: 1;
+}
+
+.card-portfolio .project-desc {
+	/* basis를 0으로 주고 오로지 grow 값으로만 크기 할당 */
+	flex-basis: 0;
+	flex-grow: 1;
+	padding: 24px;
+}
+
+.card-portfolio .project-desc h2 {
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--primary);
+	margin: 0;
+	padding: 0 0 32px;
+}
+
+.card-portfolio .project-desc .lists {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/* 요소가 늘어나도 깨지지 않게 flex-item min-width 사이즈 조정 */
+	min-width: 0;
+	word-break: break-word;
+}
+
+.card-portfolio .project-desc .lists li {
+	font-size: 14px;
+	position: relative;
+	padding-left: 20px;
+}
+
+.card-portfolio .project-desc .lists li:not(:last-of-type) {
+	margin: 0 0 10px;
+}
+
+.card-portfolio .project-desc .lists li::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	top: 3px;
+	background-color: var(--secondary);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+
+
+@media (max-width:768px) {
+
+	.card-portfolio,
+	.card-portfolio:nth-of-type(even) {
+		flex-direction: column;
+	}
+
+	.card-portfolio .project-desc h2 {
+		padding: 0 0 16px
+	}
+
+}
