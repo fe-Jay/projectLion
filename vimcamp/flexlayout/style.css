@@ -2,8 +2,9 @@
 ========================================================================== */
 
 :root {
-	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 	--left-width: max(26%, 240px);
 	--primary: #673399;
 	--secondary: #bd8fe8;
@@ -11,7 +12,6 @@
 
 * {
 	box-sizing: border-box;
-	font-weight: 500;
 }
 
 html,
@@ -20,20 +20,35 @@ body {
 	padding: 0;
 }
 
-.a11y-hidden {
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
+h2,
+h3,
+h4,
+p {
+	margin: 0;
 	padding: 0;
-	position: absolute;
 }
 
+h4,
+span,
+button {
+	font: inherit;
+}
 
+button {
+	background-color: #000;
+	border: none;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
 
-
+img {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+}
 
 /** Wrap
 ========================================================================== */
@@ -49,36 +64,22 @@ body {
 	}
 }
 
-.section {
+
+/** Component
+========================================================================== */
+
+section[class^="section"] {
 	padding: 100px 0;
 }
 
-.section-portfolio {
-	background: var(--primary);
-}
-
-.section-event {
-	background: salmon;
-}
-
-
-
-
-/** portfolio
-========================================================================== */
-
-/* portfolio-header */
-
-.portfolio-header {
-	color: #fff;
+header[class^="title"] {
 	display: flex;
 	align-items: center;
 	gap: 115px;
 	margin: 0 0 100px;
 }
 
-.portfolio-header h1 {
-	flex-basis: var(--left-width);
+header[class^="title"] h2 {
 	flex-shrink: 0;
 	font-size: clamp(32px, 3.8vw, 40px);
 	font-weight: 500;
@@ -87,59 +88,250 @@ body {
 	padding: 0;
 }
 
-.portfolio-header h1::after {
+header[class^="title"] .after-line::after {
 	content: '';
 	width: 80px;
 	height: 2px;
-	background: var(--secondary);
 	position: absolute;
 	top: 50%;
 	right: -80px;
 }
 
-.portfolio-header h1 span {
+header[class^="title"] h2 strong {
+	font-weight: inherit;
+	display: block;
+}
+
+header[class^="title"] h2 span {
 	display: inline-block;
 	position: relative;
 	z-index: 0;
 }
 
-.portfolio-header h1 span::after {
+header[class^="title"] h2 span::after {
 	content: '';
 	width: 100%;
 	height: clamp(16px, 2vw, 22px);
-	background: orangered;
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	z-index: -1;
 }
 
-.portfolio-header p {
-	color: var(--secondary);
+header[class^="title"] p {
 	font-size: 14px;
 	font-weight: 500;
 	width: min(100%, 450px);
 	line-height: 1.5;
 }
 
-@media(width < 768px) {
-	.portfolio-header {
+.mark-plus::before {
+	content: "+";
+	font: inherit;
+	color: inherit;
+	padding-right: 4px;
+	display: inline-block;
+}
+
+*[class$="-summary"] {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.card-cover img {
+	object-fit: cover;
+}
+
+.desc-label span {
+	display: inline-block;
+	font-size: 12px;
+	padding: 4px 8px;
+	background-color: #f1e0f8;
+	color: #673399;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.a11y-hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+}
+
+.ell-2 {
+	overflow: hidden;
+	white-space: normal;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-break: keep-all;
+}
+
+
+/** Event
+========================================================================== */
+
+.section-event {
+	background: seashell;
+}
+
+.title-event {
+	justify-content: space-between;
+}
+
+.title-event h2 {
+	color: salmon;
+}
+
+.title-event h2 span::after {
+	background: #fff;
+}
+
+.title-event button {
+	color: #fff;
+	background: orangered;
+	font-size: 14px;
+	padding: 12px;
+	box-shadow: inset 0 -4px 0 0px rgba(0, 0, 0, .3);
+}
+
+.content-event {
+	display: flex;
+	gap: 24px;
+}
+
+.card-event {
+	flex-basis: 0;
+	flex-grow: 1;
+	background-color: #fff;
+	position: relative;
+}
+
+.card-desc {
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	margin-bottom: 68px;
+	gap: 24px;
+}
+
+
+.desc-label span {
+	display: inline-block;
+	font-size: 12px;
+	padding: 4px 8px;
+	background-color: #f1e0f8;
+	color: #673399;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.desc-title {
+	min-height: 60px;
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0 0 8px;
+}
+
+.desc-summary {
+	color: #777;
+}
+
+.desc-people img {
+	width: 30px;
+	height: 30px;
+	border: 3px solid #fff;
+	margin-left: -12px;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+}
+
+.card-footer {
+	width: 100%;
+	min-height: 68px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+	color: #777;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 24px;
+}
+
+.card-footer::after {
+	content: '';
+	height: 2px;
+	width: calc(100% - 24px);
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #eee;
+}
+
+@media (max-width:768px) {
+	.content-event {
+		flex-direction: column;
+	}
+}
+
+/** Portfolio
+========================================================================== */
+
+.section-portfolio {
+	background: var(--primary);
+}
+
+.title-portfolio h2 {
+	flex-basis: var(--left-width);
+	color: #fff;
+}
+
+.title-portfolio .after-line::after {
+	background: var(--secondary);
+}
+
+
+.title-portfolio h2 span::after {
+	background: orangered;
+}
+
+.title-portfolio p {
+	color: var(--secondary);
+}
+
+@media (max-width:768px) {
+	.title-portfolio {
 		flex-direction: column;
 		gap: 0;
 		justify-content: flex-start;
 		align-items: flex-start;
 	}
 
-	.portfolio-header h1::after {
+	.title-portfolio h2::after {
 		width: 0;
 	}
 
-	.portfolio-header h1 span:nth-of-type(1) {
+	.title-portfolio h2 span:nth-of-type(1) {
 		display: block;
 	}
 }
-
-
 
 
 /* portfolio-content */
@@ -203,14 +395,14 @@ body {
 	z-index: 1;
 }
 
-.card-portfolio .project-desc {
+.card-portfolio .card-desc {
 	/* basis를 0으로 주고 오로지 grow 값으로만 크기 할당 */
 	flex-basis: 0;
 	flex-grow: 1;
 	padding: 24px;
 }
 
-.card-portfolio .project-desc h2 {
+.card-portfolio .card-desc h2 {
 	font-size: 18px;
 	font-weight: 700;
 	color: var(--primary);
@@ -218,7 +410,7 @@ body {
 	padding: 0 0 32px;
 }
 
-.card-portfolio .project-desc .lists {
+.card-portfolio .card-desc .lists {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -227,17 +419,17 @@ body {
 	word-break: break-word;
 }
 
-.card-portfolio .project-desc .lists li {
+.card-portfolio .card-desc .lists li {
 	font-size: 14px;
 	position: relative;
 	padding-left: 20px;
 }
 
-.card-portfolio .project-desc .lists li:not(:last-of-type) {
+.card-portfolio .card-desc .lists li:not(:last-of-type) {
 	margin: 0 0 10px;
 }
 
-.card-portfolio .project-desc .lists li::before {
+.card-portfolio .card-desc .lists li::before {
 	content: "";
 	width: 10px;
 	height: 10px;
@@ -253,7 +445,6 @@ body {
 }
 
 
-
 @media (max-width:768px) {
 
 	.card-portfolio,
@@ -261,7 +452,7 @@ body {
 		flex-direction: column;
 	}
 
-	.card-portfolio .project-desc h2 {
+	.card-portfolio .card-desc h2 {
 		padding: 0 0 16px
 	}
 
