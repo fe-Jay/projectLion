@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Object</h1>
+
+
+    <script>
+      // Object 기본 활용 예제
+      let person = {
+        name: 'jay',
+        sayHello: function() {
+          console.log('Hello 😋');
+        }
+      }
+      console.log(person.name)
+      person.sayHello()
+
+
+      //1. Date 객체 생성
+      var now = new Date();
+      //2. 연도를 가져오는 메서드 .getFullYear()
+      console.log(now.getFullYear());
+      //3. 월 정보를 가져오는 메서드 .getMonth() {0: 1월, 1: 2월, ... 10: 11월, 11: 12월} 
+      console.log(now.getMonth() + 1);
+      //4. 일 정보를 가져오는 메서드 .getDate()
+      console.log(now.getDate());
+      //5. 1970년 1월 1일 00:00:00을 기준으로 흐른 시간을 밀리초로 표시하는 메서드 .getTime()
+      console.log(now.getTime());
+      //6. 특정 일의 Date 객체 생성
+      let christmas = new Date('2023-12-25');
+      console.log(christmas);
+      //7. 특정 ms의 Date 객체 생성
+      let ms = new Date(1000);
+      console.log(ms);
+    </script>
+  </body>
+
+</html>

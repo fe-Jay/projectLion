@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 기초</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>제이쿼리 기초</h1>
+    <textarea id="content" cols="30" rows="10">Hello jquery!</textarea>
+    <button id="click">Click👩🏻‍💻</button>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+
+      //  jquery 데이터 출력
+      console.log($('#content').val());
+
+      // jquery 클릭 이벤트로 익명함수를 통해 console에 message 출력
+      $('#click').click(function() {
+        console.log('Hello!')
+      });
+    </script>
+  </body>
+
+</html>

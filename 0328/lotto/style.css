@@ -1,0 +1,38 @@
+.ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 2px;
+}
+
+.ball:nth-of-type(1) {
+  background-color: #FFB84C;
+}
+
+.ball:nth-of-type(2) {
+  background-color: #F16767;
+}
+
+.ball:nth-of-type(3) {
+  background-color: #3E54AC;
+}
+
+.ball:nth-of-type(4) {
+  background-color: #655DBB;
+}
+
+.ball:nth-of-type(5) {
+  background-color: #BFACE2;
+}
+
+.ball:nth-of-type(6) {
+  background-color: #82AAE3;
+}

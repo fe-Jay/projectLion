@@ -1,0 +1,53 @@
+ body {
+   text-align: center;
+   background-color: #eee;
+ }
+
+ #background {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   width: 300px;
+   margin: 0 auto 0;
+   position: relative;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -ms-border-radius: 20px;
+   -o-border-radius: 20px;
+ }
+
+ span {
+   padding: 20px;
+   display: inline-block;
+   color: #fff;
+   font-size: 18px;
+   border-radius: 12px;
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   -ms-border-radius: 12px;
+   -o-border-radius: 12px;
+ }
+
+ #hp {
+   padding: 20px 0;
+   font-weight: bold;
+ }
+
+ #drone {
+   background-color: dodgerblue;
+   position: relative;
+   z-index: 2;
+ }
+
+ #spit {
+   background-color: orangered;
+   position: absolute;
+   left: 20px;
+ }
+
+ #bunker {
+   background-color: slateblue;
+ }
