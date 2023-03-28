@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/*
+@if (조건) {
+  // 조건이 참일 때 실행될 구문
+}
+
+@else {
+  // if문의 조건이 거짓일 때 실행될 구문
+}
+*/
+.btn {
+  font-size: 32px;
+  background-color: white;
+}
+
+.square-av {
+  width: 100px;
+  height: 100px;
+}
+
+.circle-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  font-size: 16px;
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+    color: red;
+  }
+}/*# sourceMappingURL=006-if.css.map */

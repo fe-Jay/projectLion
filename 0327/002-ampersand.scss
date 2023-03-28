@@ -1,0 +1,62 @@
+// .box {
+//     &:focus{} 
+//     &:hover{}
+//     &:active{}
+//     &:first-child{} 
+//     &:nth-child(2){}
+//     &::after{} // 가상요소
+//     &::before{} 
+// }
+
+
+// ? 가상선택자
+ul {
+  li {
+    &:hover {
+      background: white;
+      cursor: pointer;
+
+      &:last-child {
+        border: 2px solid black;
+      }
+    }
+  }
+}
+
+
+// ? 가상요소
+ol {
+  border: 1px solid black;
+
+  li {
+    &:nth-child(1) {
+      color: red;
+    }
+
+    &:nth-child(2) {
+      color: orangered;
+    }
+
+    &:nth-child(3) {
+      color: orange;
+    }
+  }
+}
+
+
+// ? 중첩에서 벗어나고 싶으면 @at-root 사용
+.one {
+  color: yellow;
+
+  .two {
+    color: orange;
+
+    .three {
+      color: orangered;
+
+      @at-root .four {
+        color: red;
+      }
+    }
+  }
+}

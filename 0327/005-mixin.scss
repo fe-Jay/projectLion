@@ -1,0 +1,103 @@
+// ✅ 보통 _mixin.scss는 고정, 자동화 되어있는 회사 것을 가져와서 사용해보는 것 추천
+$size1x : 100px;
+$size2x : 200px;
+
+
+// * if문을 이용한 예제
+@mixin box($value) {
+  width: $size1x;
+  height: $size2x;
+
+  @if($value =='circle') {
+    border: 1px solid khaki;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  @if($value =='rect') {
+    border: 1px solid black;
+  }
+}
+
+.card {
+  @include box('circle');
+  background: blue;
+}
+
+.profile {
+  @include box('rect');
+  background: red;
+}
+
+
+// * mixin을 이용한 버튼 예제
+@mixin pri-button($width, $height, $radius: 10px) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: aqua;
+}
+
+@mixin pri-button_($width: 100px, $height: 50px, $radius: 10px) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: aqua;
+}
+
+.btn {
+  @include pri-button(100px, 50px, 20px)
+}
+
+.btn_ {
+  @include pri-button(100px, 50px)
+}
+
+.btn__ {
+  @include pri-button(100px, null, 20px)
+}
+
+.btn__ {
+  @include pri-button_(100px, null, 20px)
+}
+
+// 중앙값 비우기
+.btn__ {
+  @include pri-button_(100px, $radius: 20px)
+}
+
+
+// * mixin 카드 만들기 실습
+$size1x : 100px;
+$size2x : 200px;
+
+@mixin box($width: $size1x, $height: $size1x, $border-radius : 10px) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+}
+
+@mixin flex($items : center, $justify : center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $items;
+}
+
+.card {
+  @include box
+}
+
+.card-item {
+  @include flex(right, right)
+}
+
+.product-item {
+  @include box($size2x, $size2x, 20%)
+}

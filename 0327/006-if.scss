@@ -1,0 +1,136 @@
+/*
+@if (조건) {
+  // 조건이 참일 때 실행될 구문
+}
+
+@else {
+  // if문의 조건이 거짓일 때 실행될 구문
+}
+*/
+
+@mixin button($color) {
+  @if $color ==black {
+    font-size: 32px;
+    background-color: white;
+  }
+
+  @else if $color ==white {
+    font-size: 24px;
+    background-color: black;
+  }
+
+  @else if $color ==green {
+    font-size: 24px;
+    background-color: black;
+  }
+
+  @else {
+    font-size: 16px;
+    background-color: blue;
+  }
+}
+
+.btn {
+  @include button(black);
+}
+
+
+// * if문 예시 
+// circle이 false면 사각형을, true이면 원형으로 스타일함
+@mixin avatar($size, $circle: false) {
+  width: $size;
+  height: $size;
+
+  @if $circle {
+    border-radius: $size / 2;
+  }
+}
+
+.square-av {
+  @include avatar(100px, $circle: false);
+}
+
+.circle-av {
+  @include avatar(100px, $circle: true);
+}
+
+
+// * if+비교연산자(숫자형) 사용 예시
+@mixin flex($align: null, $way: row) {
+  display: flex;
+  flex-direction: $way;
+  @content;
+
+  @if(#{$align}=='center') {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @else if (#{$align}=='leftCenter') {
+    align-items: center;
+  }
+
+  @else if (#{$align}=='spaceCenter') {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @else if (#{$align}=='space') {
+    justify-content: space-between;
+  }
+}
+
+.flex-item {
+  @include flex(spaceCenter, column)
+}
+
+
+// * 미디어쿼리 조건문 예시
+$media-width-lg: 1000px;
+$media-width-md: 800px;
+$media-width-sm: 500px;
+
+$media-font-lg: 16px;
+$media-font-md: 14px;
+$media-font-sm: 12px;
+
+@mixin responsive($size) {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  font-size: $media-font-lg;
+
+  @if $size ==lg {
+    @media screen and (max-width: $media-width-lg) {
+      width: 100px;
+      height: 100px;
+      font-size: $media-font-md;
+      @content;
+    }
+  }
+
+  @else if $size ==md {
+    @media screen and (max-width: $media-width-md) {
+      width: 100px;
+      height: 100px;
+      font-size: $media-font-md;
+      @content;
+    }
+  }
+
+  @else if $size ==sm {
+    @media screen and (max-width: $media-width-sm) {
+      width: 100px;
+      height: 100px;
+      font-size: $media-font-sm;
+      @content;
+    }
+  }
+
+}
+
+.main {
+  @include responsive(lg) {
+    color: red;
+  }
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* 두 줄 주석입니다. */
+.one {
+  color: blue;
+}
+.one .two {
+  color: green;
+}
+.one .two .three {
+  color: red;
+}
+
+ul li {
+  color: red;
+  font-size: 10px;
+}
+
+.add-icon {
+  background-image: url("./assets/arrow-right-solid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}/*# sourceMappingURL=001-Nesting.css.map */

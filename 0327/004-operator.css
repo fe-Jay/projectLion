@@ -1,0 +1,35 @@
+@charset "UTF-8";
+p {
+  letter-spacing: 1rem;
+}
+
+.one {
+  font-size: 20px;
+}
+
+.two {
+  font-size: 20px;
+}
+
+.three {
+  font-size: 20px;
+}
+
+.four {
+  font-size: 2px;
+}
+
+.five {
+  font-size: 2px;
+}
+
+p {
+  /* 모든 조건이 true일 때 실행시키고 싶으면 and */
+  letter-spacing: 0.5rem;
+}
+
+/* 어떤 조건 중 하나라도 true라면 true */
+p {
+  /* 모든 조건이 true일 때 실행시키고 싶으면 and */
+  letter-spacing: 1rem;
+}/*# sourceMappingURL=004-operator.css.map */

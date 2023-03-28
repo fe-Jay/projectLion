@@ -1,0 +1,33 @@
+ul li:hover {
+  background: white;
+  cursor: pointer;
+}
+ul li:hover:last-child {
+  border: 2px solid black;
+}
+
+ol {
+  border: 1px solid black;
+}
+ol li:nth-child(1) {
+  color: red;
+}
+ol li:nth-child(2) {
+  color: orangered;
+}
+ol li:nth-child(3) {
+  color: orange;
+}
+
+.one {
+  color: yellow;
+}
+.one .two {
+  color: orange;
+}
+.one .two .three {
+  color: orangered;
+}
+.four {
+  color: red;
+}/*# sourceMappingURL=002-ampersand.css.map */

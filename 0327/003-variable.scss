@@ -1,0 +1,98 @@
+// Variable 
+
+//색상
+$red: #ee4444;
+$black: #222;
+$bg-color: #3e5e9e;
+$link-color: red;
+$p-color: #282A36;
+
+//폰트사이즈
+$font-p: 13px;
+$font-h1: 28px;
+
+//폰트
+$base-font: 'Noto Sans KR', sans-serif;
+
+// String
+$path : './assets/img/';
+$name : 'background.png';
+
+// lists
+$sizes: 40px, 50px, 80px;
+$valid-sides: top, bottom, left, right;
+
+//maps
+$font-sizes: (
+  "h1": 45px,
+  "h2": 19px,
+  "p": 16px
+);
+
+$font-weight: (
+  "l": 300,
+  "m": 500,
+  "b": 700
+);
+
+
+.cover {
+  background-image: url($path + $name);
+}
+
+.title {
+  font-size: nth($sizes, 1);
+}
+
+.title2 {
+  font-size: map-get($font-sizes, "h2");
+}
+
+.title3 {
+  font-weight: map-get($map: $font-weight, $key: "b")
+}
+
+//* list
+$valid-sides: left, center, right;
+
+.screen-box {
+  text-align: nth($valid-sides, 1);
+}
+
+
+// * map
+$font-sizes: (
+  "h1": 45px,
+  "h2": 19px,
+  "p": 16px
+);
+
+$size: (
+  "1x": 200px,
+  "2x": 400px,
+  "4x": 1600px
+); //글자 굵기 리스트
+
+.test1 {
+  font-size: map-get($font-sizes, "p");
+  width: map-get($size, "2x");
+  height: map-get($size, "1x");
+}
+
+
+//  * 지역변수 & 전역변수
+$value : blue;
+
+.one {
+  /* 지역 변수 */
+  $value : red;
+  color: $value;
+
+  .three {
+    background: $value;
+  }
+}
+
+.two {
+  color: $value;
+}
