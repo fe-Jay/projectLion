@@ -14,7 +14,7 @@
   <body>
     <header class="head">
       <h1>
-        <img src="img/Logo-fin.svg" alt="HODU">
+        <img src="img/logo.svg" alt="HODU">
       </h1>
       <nav>
         <ul class="head-nav">
@@ -28,6 +28,7 @@
     </header>
     <!-- 1. Cover -->
     <section class="cover">
+      <h2 class="a11y-hidden">고양이 소개</h2>
       <div class="wrapper">
         <article class="cover-content">
           <h2>
@@ -91,7 +92,7 @@
     <!-- 3. subscribe -->
     <section class="subscribe">
       <h2 class="a11y-hidden">subscribe</h2>
-      <form class="subsc-form" name="" action="">
+      <form class="subsc-form">
         <header>
           <h3>Subscribe to our Blog post</h3>
           <p>
@@ -102,7 +103,7 @@
         <fieldset>
           <label for="e-mail" class="a11y-hidden">이메일 입력</label>
           <input id="e-mail" type="email" placeholder="Enter your e-mail address" required>
-          <button typ="submit" class="btn-open-modal btn-primary">Subscribe</button>
+          <button type="submit" class="btn-open-modal btn-primary">Subscribe</button>
         </fieldset>
       </form>
     </section>
@@ -124,7 +125,7 @@
     <!-- 5. footer -->
     <footer>
       <a href="#none">
-        <img src="img/Logo-fin.svg" alt="HODU">
+        <img src="img/logo.svg" alt="HODU">
       </a>
       <ul class="btn-sns-list">
         <li><a class="btn-sns" href="#none"><span class="a11y-hidden">블로그</span></a></li>
@@ -138,12 +139,13 @@
 
     <script>
       // 구독하기 모달
-      const open = document.querySelector('.subsc-form');
+      const emailForm = document.querySelector('.subsc-form');
       const modal = document.querySelector('dialog');
-
-      open.addEventListener('submit', () => {
+      emailForm.addEventListener('submit', (e) => {
+        e.preventDefault();
         modal.showModal();
       });
+
 
       // 모바일 사이드 메뉴 토글
       const toggleBtn = document.querySelector('.menu-toggle');
