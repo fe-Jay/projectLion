@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Asset/nomalize.css">
+    <title>반응형 이미지</title>
+    <style>
+      .Box article {
+        display: block;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .bg {
+        background-image: url('https://content.surfit.io/thumbs/image/KR0k5/Q60Mn/11509909006318961ac0bfd.jpg/cover-center-2x.webp');
+        background-position: center;
+        font-size: 0;
+        height: 600px;
+      }
+
+      .cover {
+        background-size: cover;
+      }
+
+      .contain {
+        background-size: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="Box">
+      <h1>반응형 이미지 & 비디오</h1>
+      <!-- <article>
+        <h2>Img</h2>
+        <h3>width는 100%지만 최대 width는 파일의 크기로 제한</h3>
+        <img src="https://api.surfit.io/v1/category/content-cover/develop/javascript/2x" alt="이미지">
+      </article>
+      
+      <article>
+        <h2>Background</h2>
+        <h3>size : initial = repeat.</h3>
+        <article class="bg">
+          <h4>배경화면</h4>
+        </article>
+
+        <h3>cover : 컨테이너 전체를 bg로 덮음.</h3>
+        <article class="bg cover">
+          <h4>배경화면</h4>
+        </article>
+
+        <h3>contain : 컨테이너 전체를 bg로 덮지만 배경 이미지를 자르지 않고 원본비율 유지</h3>
+        <article class="bg contain">
+          <h4>배경화면</h4>
+        </article> -->
+
+      <article>
+        <h2>Video</h2>
+        <h3>반응형 video</h3>
+        <video src="asset/nextlevel.mp4" mute autoplay></video>
+      </article>
+    </section>
+  </body>
+
+</html>

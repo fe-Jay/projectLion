@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Asset/nomalize.css">
+    <title>반응형 이미지</title>
+    <style>
+      body {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .Box article {
+        display: block;
+      }
+
+      img,
+      video {
+        max-width: 100%;
+      }
+
+      .bg {
+        background-image: url('https://content.surfit.io/thumbs/image/KR0k5/Q60Mn/11509909006318961ac0bfd.jpg/cover-center-2x.webp');
+        background-position: center;
+        font-size: 0;
+        height: 600px;
+      }
+
+      /* 배경 */
+      .cover {
+        background-size: cover;
+      }
+
+      .contain {
+        background-size: contain;
+      }
+
+      /* 비디오 */
+      .Box article.cont-video {
+        position: relative;
+        padding-top: 56.25%;
+        /* padding-top, padding-bottom 속성의 % 값은 부모 요소의 넓이에 비례합니다. */
+        /* 예를 들어 부모의 넚이가 1200px 이라면 자식요소의 padding-top=50% 의 값은 600px 과 같습니다. */
+      }
+
+      .video-next-level {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .full-screen-vid {
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="Box">
+      <h1>반응형 이미지와 비디오</h1>
+      <article>
+        <h2>반응형 이미지</h2>
+        <h3>width는 100%지만 최대 width는 파일의 크기로 제한</h3>
+        <img src="https://api.surfit.io/v1/category/content-cover/develop/javascript/2x" alt="이미지">
+      </article>
+
+      <article>
+        <h2>Background</h2>
+        <h3>size : initial = repeat.</h3>
+        <article class="bg">
+          <h4>배경화면</h4>
+        </article>
+
+        <h3>cover : 컨테이너 전체를 bg로 덮음.</h3>
+        <article class="bg cover">
+          <h4>배경화면</h4>
+        </article>
+
+        <h3>contain : 컨테이너 전체를 bg로 덮지만 배경 이미지를 자르지 않고 원본비율 유지</h3>
+        <article class="bg contain">
+          <h4>배경화면</h4>
+        </article>
+
+        <article>
+          <h2>반응형 비디오</h2>
+          <h3>video 태그</h3>
+          <p>src="" 기능으로 영상을 가져오면 width를 % 단위로 입력하면 자동으로 반응형 비율 고정</p>
+          <video src="asset/nextlevel.mp4" mute></video>
+
+          <h3>iframe</h3>
+          <p>부모 요소에 padding-y 값을 줘서 비율 조정</p>
+          <article class="cont-video">
+            <iframe class="video-next-level"
+              src="https://www.youtube.com/embed/4TWR90KJl84?autoplay=1&mute=1&loop=1&playlist=4TWR90KJl84&controls=1"
+              title="YouTube video player" frameborder="0"></iframe>
+          </article>
+        </article>
+    </section>
+
+    <!-- 꽉 채운 비디오 -->
+    <!-- <video class="full-screen-vid" src="asset/nextlevel.mp4" mute></video> -->
+
+  </body>
+
+</html>
